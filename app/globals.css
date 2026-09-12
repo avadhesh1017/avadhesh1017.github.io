@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-very-sm: 20rem;
+  --breakpoint-mg-sm: 23.438rem;
+  --breakpoint-ex-sm: 26.625rem;
+  --breakpoint-sm: 36.25rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 89.9375rem;
+
+  --color-dark-bg: #050505;
+  --color-darker-bg: #0d0d0d;
+  --color-card-bg: #1a1a1a;
+  --color-muted-text: #8b8b8b;
+  --color-dim-text: #727272;
+  --color-light-heading: #f5f5f5;
+  --color-light-bg: #f7f7f7;
+  --color-soft-text: #e6e6e6;
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #2d2d2d;
+  --color-android-green: #3ddc84;
+  --color-android-dark: #1b5e20;
+
+  --shadow-card: 0px 0.6px 0.6px -1.25px #0000002e;
+  --shadow-glow: 0px 12px 24px 0px rgba(61, 220, 132, 0.12);
+  --shadow-glow-white: 0px 12px 24px 0px rgba(255, 255, 255, 0.12);
+
+  --radius-btn: 38px;
+  --radius-pill: 100px;
+}
+
+@layer components {
+  .section-container {
+    @apply container mx-auto sm:px-8 ex-sm:px-6 px-4 lg:py-20 md:py-16 sm:py-12 py-[32px] ex-sm:py-[38px];
+  }
+  .section-label-wrapper {
+    @apply flex gap-1.5 items-center;
+  }
+  .section-label-text {
+    @apply text-xl text-muted-text;
+  }
+  .section-heading {
+    @apply font-medium text-4xl very-sm:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white;
+  }
+  .section-heading-dark {
+    @apply font-medium text-4xl very-sm:text-5xl sm:text-6xl md:text-7xl lg:text-9xl text-black;
+  }
+  .btn-primary {
+    @apply rounded-btn bg-white px-[38px] py-4 text-lg font-semibold text-black transition-all hover:opacity-90 hover:scale-[1.02];
+  }
+  .btn-green {
+    @apply rounded-btn bg-android-green px-[38px] py-4 text-lg font-semibold text-black transition-all hover:opacity-90 hover:scale-[1.02];
+  }
+  .btn-ghost {
+    @apply h-fit items-center flex gap-2 px-4 py-3.5 rounded-pill border border-solid border-white text-white transition-all hover:bg-white/10;
+  }
+  .curve-wrap {
+    @apply absolute top-0 left-0 right-0 z-20 w-full overflow-hidden pointer-events-none;
+  }
+  .social-icon-dark {
+    @apply p-3 rounded-full bg-black/15 backdrop-blur-[5px] transition-transform hover:scale-110;
+  }
+  .social-icon-light {
+    @apply p-3 rounded-full bg-white/15 backdrop-blur-[5px] transition-transform hover:scale-110;
+  }
+  .gradient-btn-white {
+    background: linear-gradient(117.64deg, #ffffff 19%, #e6e6e6 75%);
+  }
+  .gradient-btn-green {
+    background: linear-gradient(117.64deg, #3ddc84 19%, #2e7d32 75%);
+  }
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Selection */
+::selection {
+  background: #3ddc84;
+  color: #000;
+}
