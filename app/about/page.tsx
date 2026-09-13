@@ -50,11 +50,11 @@ export default function AboutPage() {
           <div className="w-full lg:w-[320px] shrink-0">
             <div className="w-full h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-android-green/10 to-transparent">
               <Image
-                src="/img/profile-placeholder.svg"
+                src="/img/profile.jpg"
                 width={320}
                 height={400}
                 alt="Avadhesh Ghevariya"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 320px"
                 priority
                 unoptimized

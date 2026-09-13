@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <text x="200" y="140" text-anchor="middle" fill="#7C4DFF" font-family="system-ui" font-size="28" font-weight="bold">MangaLens</text>
+  <text x="200" y="175" text-anchor="middle" fill="#7C4DFF80" font-family="system-ui" font-size="14">OCR • Translate • Overlay</text>
+  <circle cx="200" cy="85" r="18" fill="none" stroke="#7C4DFF" stroke-width="2"/>
+  <line x1="213" y1="98" x2="225" y2="110" stroke="#7C4DFF" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

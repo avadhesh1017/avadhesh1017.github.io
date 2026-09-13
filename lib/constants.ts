@@ -157,6 +157,80 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    id: "tradejournal",
+    title: "TradeJournal",
+    subtitle: {
+      en: "S Pen Screen Capture & Annotation Trading Journal",
+      de: "S Pen Bildschirmaufnahme & Annotations-Handelsjournal",
+    },
+    category: { en: "Android App", de: "Android-App" },
+    time: "2025",
+    img: "/img/tradejournal-placeholder.svg",
+    description: {
+      en: "A native Android trading journal that replaces manual screenshot workflows — one-tap S Pen screen capture with pressure-sensitive annotation overlay, organized journal management with P/L tagging, and PDF export.",
+      de: "Ein natives Android-Handelsjournal, das manuelle Screenshot-Workflows ersetzt — Ein-Tipp S Pen Bildschirmaufnahme mit druckempfindlichem Annotations-Overlay, organisierte Journalverwaltung mit G/V-Tagging und PDF-Export.",
+    },
+    technologies: ["Kotlin", "Room DB", "MediaProjection", "Material Design 3", "Coroutines", "Custom Canvas", "iText PDF"],
+    featured: true,
+    accentColor: "#FFB300",
+    keyFeatures: [
+      {
+        en: "S Pen Air Command integration for one-tap capture",
+        de: "S Pen Air Command Integration für Ein-Tipp-Aufnahme",
+      },
+      {
+        en: "Floating overlay with pressure-sensitive drawing",
+        de: "Schwebendes Overlay mit druckempfindlichem Zeichnen",
+      },
+      {
+        en: "Organized journals with Profit/Loss/Break-Even tagging",
+        de: "Organisierte Journale mit Gewinn/Verlust/Break-Even-Tagging",
+      },
+      {
+        en: "PDF export with auto-numbered trade pages",
+        de: "PDF-Export mit automatisch nummerierten Handelsseiten",
+      },
+    ],
+    github: "https://github.com/avadhesh1017/TradeJournal",
+  },
+  {
+    id: "mangalens",
+    title: "MangaLens",
+    subtitle: {
+      en: "Real-Time Screen Translation Overlay for Manga",
+      de: "Echtzeit-Bildschirm-Übersetzungs-Overlay für Manga",
+    },
+    category: { en: "Android App", de: "Android-App" },
+    time: "2025",
+    img: "/img/mangalens-placeholder.svg",
+    description: {
+      en: "A real-time screen translation overlay — captures manga pages, runs on-device OCR with ML Kit, and overlays DeepL-powered translations directly onto speech bubbles. Supports tap-to-translate and full-page modes with 13+ source languages.",
+      de: "Ein Echtzeit-Bildschirm-Übersetzungs-Overlay — erfasst Manga-Seiten, führt On-Device-OCR mit ML Kit durch und blendet DeepL-gestützte Übersetzungen direkt auf Sprechblasen ein. Unterstützt Tipp-zum-Übersetzen und Ganzseitenmodus mit 13+ Quellsprachen.",
+    },
+    technologies: ["Kotlin", "ML Kit OCR", "DeepL API", "MediaProjection", "Material Design 3", "Coroutines", "TTS"],
+    featured: true,
+    accentColor: "#7C4DFF",
+    keyFeatures: [
+      {
+        en: "Floating trigger bubble — translate any app without switching",
+        de: "Schwebende Trigger-Blase — jede App übersetzen ohne Wechsel",
+      },
+      {
+        en: "On-device OCR with Google ML Kit (no internet needed for detection)",
+        de: "On-Device OCR mit Google ML Kit (kein Internet für Erkennung nötig)",
+      },
+      {
+        en: "Tap-to-translate words or full-page overlay translation",
+        de: "Tipp-zum-Übersetzen von Wörtern oder Ganzseitenüberlagerung",
+      },
+      {
+        en: "Translation cache to save API calls and show instant results",
+        de: "Übersetzungs-Cache zum Sparen von API-Aufrufen und sofortige Ergebnisse",
+      },
+    ],
+    github: "https://github.com/avadhesh1017/MangaLens",
+  },
 ];
 
 /* ────────────────────────────────────────────
@@ -195,10 +269,10 @@ export const SKILL_CATEGORIES = [
     skills: [
       "Android Studio",
       "Java",
+      "Kotlin",
       "XML Layouts",
       "Material Design 3",
       "MVVM Architecture",
-      "ViewBinding",
     ],
   },
   {
@@ -209,7 +283,7 @@ export const SKILL_CATEGORIES = [
       "FCM Push Notifications",
       "WorkManager",
       "LiveData & ViewModel",
-      "REST APIs",
+      "Kotlin Coroutines & Flow",
     ],
   },
   {

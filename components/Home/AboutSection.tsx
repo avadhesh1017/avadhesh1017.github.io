@@ -178,11 +178,11 @@ export default function AboutSection() {
           <div className="w-full lg:w-[320px] shrink-0 about-photo-wrapper will-change-transform">
             <div className="w-full h-[400px] lg:h-[500px] rounded-[12px] shadow-md overflow-hidden bg-gradient-to-br from-android-green/10 to-transparent flex items-center justify-center relative">
               <Image
-                src="/img/profile-placeholder.svg"
+                src="/img/profile.jpg"
                 width={320}
                 height={500}
                 alt="Avadhesh Ghevariya"
-                className="w-full h-full object-cover object-center hover:scale-[1.02] transition-transform duration-500"
+                className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 320px"
                 priority
                 unoptimized
