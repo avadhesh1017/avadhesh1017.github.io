@@ -155,8 +155,8 @@ export default function ContactSection() {
               <div className="w-3 h-3 rounded-full bg-android-green animate-pulse" />
               <p className="text-white/80 text-sm font-medium">
                 {lang === "en"
-                  ? "Available for freelance Android projects"
-                  : "Verfügbar für freiberufliche Android-Projekte"}
+                  ? "Available for on-site positions"
+                  : "Verfügbar für Vor-Ort-Stellen"}
               </p>
             </div>
           </div>

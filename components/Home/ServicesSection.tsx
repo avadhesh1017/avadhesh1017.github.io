@@ -1,6 +1,7 @@
 "use client";
 
 import SvgIcon from "../common/SvgIcon";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -62,11 +63,27 @@ export default function ServicesSection() {
               index % 2 !== 0 ? "lg:flex-row-reverse" : ""
             }`}
           >
-            {/* Image placeholder */}
-            <div className="w-full lg:min-w-[51%] relative min-h-[300px] lg:min-h-[440px] bg-gradient-to-br from-android-green/5 to-transparent flex items-center justify-center">
-              <div className="flex flex-col items-center gap-4">
-                <SvgIcon type="android" className="w-20 h-20 opacity-20" normalColor="#3DDC84" />
-                <p className="text-white/20 text-lg font-medium">{item.projectType[lang]}</p>
+            {/* App screenshot with tech background */}
+            <div className="w-full lg:min-w-[51%] relative min-h-[300px] lg:min-h-[440px] bg-gradient-to-br from-[#0a1a0a] to-black flex items-center justify-center overflow-hidden">
+              {/* Decorative tech accent behind the phone */}
+              <Image
+                src="/img/tech-accent.png"
+                alt=""
+                fill
+                unoptimized
+                className="object-cover opacity-20"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+              {/* Phone screenshot */}
+              <div className="relative z-10 w-[180px] sm:w-[200px] lg:w-[220px] rounded-2xl overflow-hidden shadow-2xl shadow-android-green/10 border border-white/10">
+                <Image
+                  src={item.img}
+                  width={220}
+                  height={470}
+                  alt={item.projectType[lang]}
+                  className="w-full h-auto"
+                  unoptimized
+                />
               </div>
             </div>
 

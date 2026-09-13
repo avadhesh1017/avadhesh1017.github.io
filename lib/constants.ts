@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
     },
     category: { en: "Android App", de: "Android-App" },
     time: "2025",
-    img: "/img/taskflow.svg",
+    img: "/img/taskflow-screenshot.jpg",
     description: {
       en: "A full-featured task management app with Firebase Auth, Firestore real-time sync, calendar integration, analytics dashboard, and push notifications — built with MVVM architecture.",
       de: "Eine voll ausgestattete Task-Management-App mit Firebase Auth, Firestore Echtzeit-Synchronisation, Kalenderintegration, Analytics-Dashboard und Push-Benachrichtigungen — erstellt mit MVVM-Architektur.",
@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
     },
     category: { en: "Android App", de: "Android-App" },
     time: "2025",
-    img: "/img/notyourmoney.svg",
+    img: "/img/notyourmoney-screenshot.jpg",
     description: {
       en: "An offline-first expense tracking app with Room database, budget management, borrow/debt tracking, recurring transactions via WorkManager, and rich analytics with CSV/PDF export — bilingual EN/DE.",
       de: "Eine Offline-First Ausgaben-Tracking-App mit Room-Datenbank, Budgetverwaltung, Schulden-Tracking, wiederkehrende Transaktionen via WorkManager und umfangreiche Analysen mit CSV/PDF-Export — zweisprachig EN/DE.",
@@ -241,7 +241,7 @@ export const CAREER_TIMELINE = [
   {
     period: "2024 – 2025",
     role: { en: "Application Developer", de: "Anwendungsentwickler" },
-    company: { en: "Freelance / Projects", de: "Freiberuflich / Projekte" },
+    company: { en: "Professional Projects", de: "Berufliche Projekte" },
     description: {
       en: "Development and maintenance of Android applications with Android Studio and Java. Practical experience in application development, databases, and software engineering.",
       de: "Entwicklung und Wartung von Android-Anwendungen mit Android Studio und Java. Praktische Erfahrung in Anwendungsentwicklung, Datenbanken und Softwareentwicklung.",
@@ -278,7 +278,7 @@ export const SERVICES = [
         "Play Store-fertige APK & Deployment",
       ],
     },
-    img: "/img/taskflow.svg",
+    img: "/img/taskflow-screenshot.jpg",
   },
   {
     projectType: { en: "UI/UX Design & Prototyping", de: "UI/UX Design & Prototyping" },
@@ -296,7 +296,7 @@ export const SERVICES = [
         "Responsive Multi-Device Layouts",
       ],
     },
-    img: "/img/notyourmoney.svg",
+    img: "/img/notyourmoney-screenshot.jpg",
   },
 ] as const;
 

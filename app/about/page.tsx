@@ -49,7 +49,6 @@ export default function AboutPage() {
           {/* Photo */}
           <div className="w-full lg:w-[320px] shrink-0">
             <div className="w-full h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-android-green/10 to-transparent">
-              {/* Replace profile-placeholder.svg with profile.jpg when available */}
               <Image
                 src="/img/profile-placeholder.svg"
                 width={320}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -76,6 +77,42 @@ export default function HeroSection() {
           },
         }
       );
+
+      /* Parallax drift on the hero background image */
+      gsap.to(".hero-bg-img", {
+        yPercent: 12,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 2,
+        },
+      });
+
+      /* Fade-in the name + badge on load */
+      gsap.from(".hero-name", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.3,
+      });
+      gsap.from(".hero-role", {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.6,
+      });
+      gsap.from(".hero-bottom-item", {
+        y: 25,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.15,
+        delay: 0.9,
+      });
     },
     { scope: sectionRef }
   );
@@ -92,55 +129,70 @@ export default function HeroSection() {
         </div>
 
         <div ref={heroRef} className="will-change-transform">
-          <div className="relative h-screen overflow-hidden bg-gradient-to-br from-black via-[#0a1a0a] to-black">
-            {/* Subtle grid pattern */}
+          <div className="relative h-screen overflow-hidden bg-black">
+            {/* AI-generated hero background */}
+            <Image
+              src="/img/hero-bg.png"
+              alt=""
+              fill
+              priority
+              unoptimized
+              className="hero-bg-img object-cover object-center opacity-60"
+              sizes="100vw"
+            />
+
+            {/* Gradient overlays for depth and text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
+
+            {/* Subtle animated scanlines */}
             <div
-              className="absolute inset-0 opacity-[0.03]"
+              className="absolute inset-0 opacity-[0.015] pointer-events-none"
               style={{
-                backgroundImage: `linear-gradient(rgba(61,220,132,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(61,220,132,0.3) 1px, transparent 1px)`,
-                backgroundSize: "60px 60px",
+                backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(61,220,132,0.15) 2px, rgba(61,220,132,0.15) 4px)`,
               }}
             />
 
-            <div className="absolute inset-0 bg-black/60" />
-
             <div className="relative z-10 mx-auto flex h-screen flex-col justify-between px-6 container">
-              {/* Top — Android icon */}
+              {/* Top — Android icon with glow */}
               <div className="flex w-full items-center justify-center gap-2 pt-8">
-                <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none">
-                  <path
-                    d="M18 8H6V16C6 16.53 6.21 17.04 6.59 17.41C6.96 17.79 7.47 18 8 18H16C16.53 18 17.04 17.79 17.41 17.41C17.79 17.04 18 16.53 18 16V8Z"
-                    stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-                  />
-                  <path d="M15 3L17 6H7L9 3" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="10" cy="5.5" r="0.5" fill="#3DDC84" />
-                  <circle cx="14" cy="5.5" r="0.5" fill="#3DDC84" />
-                  <path d="M5 10V14M19 10V14M9 18V21M15 18V21" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
+                <div className="relative">
+                  <div className="absolute inset-0 blur-xl bg-android-green/20 rounded-full scale-150" />
+                  <svg viewBox="0 0 24 24" className="relative w-8 h-8" fill="none">
+                    <path
+                      d="M18 8H6V16C6 16.53 6.21 17.04 6.59 17.41C6.96 17.79 7.47 18 8 18H16C16.53 18 17.04 17.79 17.41 17.41C17.79 17.04 18 16.53 18 16V8Z"
+                      stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
+                    />
+                    <path d="M15 3L17 6H7L9 3" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="10" cy="5.5" r="0.5" fill="#3DDC84" />
+                    <circle cx="14" cy="5.5" r="0.5" fill="#3DDC84" />
+                    <path d="M5 10V14M19 10V14M9 18V21M15 18V21" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
+                  </svg>
+                </div>
               </div>
 
-              {/* Center — Big name */}
+              {/* Center — Big name with glow effect */}
               <div className="flex flex-col items-center gap-4">
-                <h1 className="text-center font-bold text-white text-5xl mg-sm:text-6xl sm:text-8xl md:text-[140px] lg:text-[200px] leading-none tracking-tight">
+                <h1 className="hero-name text-center font-bold text-white text-5xl mg-sm:text-6xl sm:text-8xl md:text-[140px] lg:text-[200px] leading-none tracking-tight drop-shadow-[0_0_80px_rgba(61,220,132,0.15)]">
                   AVADHESH
                 </h1>
-                <p className="text-android-green font-medium text-lg sm:text-xl md:text-2xl tracking-widest uppercase">
+                <p className="hero-role text-android-green font-medium text-lg sm:text-xl md:text-2xl tracking-widest uppercase">
                   {t("hero.role", lang)}
                 </p>
               </div>
 
               {/* Bottom — CTA + info */}
               <div className="flex flex-col items-center md:flex-row md:items-end justify-between gap-4 sm:gap-6 md:gap-0 pb-6">
-                <Link href="/contact" className="btn-green w-full md:w-auto text-center">
+                <Link href="/contact" className="hero-bottom-item btn-green w-full md:w-auto text-center">
                   {t("hero.cta", lang)}
                 </Link>
 
-                <address className="not-italic font-medium text-white text-center md:text-left">
+                <address className="hero-bottom-item not-italic font-medium text-white text-center md:text-left">
                   <p className="text-white/60">avdheshghevariya01@gmail.com</p>
                   <p>{t("hero.location", lang)}</p>
                 </address>
 
-                <div className="flex items-center rounded-[4px] bg-white/[0.06] p-3 backdrop-blur-[3px] border border-white/10">
+                <div className="hero-bottom-item flex items-center rounded-lg bg-white/[0.06] p-3 backdrop-blur-md border border-white/10 shadow-lg shadow-android-green/5">
                   <ul className="grid gap-1.5 px-3 text-sm">
                     <li className="text-android-green font-medium">Android Development</li>
                     <li className="text-white/40">Firebase & Cloud</li>
