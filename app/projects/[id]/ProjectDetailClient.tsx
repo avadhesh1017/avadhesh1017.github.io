@@ -2,14 +2,18 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import SvgIcon from "@/components/common/SvgIcon";
 import { PROJECTS } from "@/lib/constants";
 import { useLang } from "@/lib/i18n";
+import { useRef, useState } from "react";
 
 export default function ProjectDetailClient() {
   const params = useParams();
   const { lang } = useLang();
   const project = PROJECTS.find((p) => p.id === params.id);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIdx, setActiveIdx] = useState(0);
 
   if (!project) {
     return (
@@ -24,6 +28,37 @@ export default function ProjectDetailClient() {
       </main>
     );
   }
+
+  const shots = project.screenshots ?? [];
+  const hasShots = shots.length > 0;
+  const isLandscape = shots.some((s) => s.includes("mangalens"));
+
+  const scrollTo = (idx: number) => {
+    if (!scrollRef.current) return;
+    const children = scrollRef.current.children;
+    if (children[idx]) {
+      children[idx].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      setActiveIdx(idx);
+    }
+  };
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const children = Array.from(container.children) as HTMLElement[];
+    const containerCenter = container.scrollLeft + container.clientWidth / 2;
+    let closest = 0;
+    let minDist = Infinity;
+    children.forEach((child, i) => {
+      const childCenter = child.offsetLeft + child.clientWidth / 2;
+      const dist = Math.abs(childCenter - containerCenter);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = i;
+      }
+    });
+    setActiveIdx(closest);
+  };
 
   return (
     <main className="bg-black">
@@ -57,22 +92,120 @@ export default function ProjectDetailClient() {
         </div>
       </section>
 
-      {/* Hero image placeholder */}
+      {/* Screenshots Gallery */}
       <section className="section-container pt-6">
-        <div
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-3xl flex items-center justify-center border border-white/5"
-          style={{ background: `linear-gradient(135deg, ${project.accentColor}10, transparent)` }}
-        >
-          <div className="flex flex-col items-center gap-4">
+        {hasShots ? (
+          <div className="grid gap-4">
             <div
-              className="w-24 h-24 rounded-3xl flex items-center justify-center text-4xl font-bold"
-              style={{ background: `${project.accentColor}20`, color: project.accentColor }}
+              className="relative rounded-3xl border border-white/5 overflow-hidden"
+              style={{ background: `linear-gradient(135deg, ${project.accentColor}08, #000 60%, ${project.accentColor}05)` }}
             >
-              {project.title[0]}
+              <div
+                ref={scrollRef}
+                onScroll={handleScroll}
+                className="flex gap-4 sm:gap-6 overflow-x-auto py-8 sm:py-12 px-6 sm:px-10 snap-x snap-mandatory"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {shots.map((src, i) => (
+                  <div
+                    key={i}
+                    className="snap-center shrink-0 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                    onClick={() => scrollTo(i)}
+                  >
+                    {isLandscape ? (
+                      <div
+                        className="w-[280px] sm:w-[360px] md:w-[440px] rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                        style={{ boxShadow: `0 25px 60px ${project.accentColor}15` }}
+                      >
+                        <Image
+                          src={src}
+                          width={440}
+                          height={275}
+                          alt={`${project.title} screenshot ${i + 1}`}
+                          className="w-full h-auto"
+                          unoptimized
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className="w-[160px] sm:w-[190px] md:w-[220px] rounded-[24px] sm:rounded-[28px] border-[3px] border-white/15 overflow-hidden bg-black"
+                        style={{ boxShadow: `0 25px 60px ${project.accentColor}15` }}
+                      >
+                        <div className="h-5 sm:h-6 bg-black flex items-center justify-center">
+                          <div className="w-16 sm:w-20 h-3 sm:h-4 bg-black rounded-b-xl border border-white/10 border-t-0" />
+                        </div>
+                        <Image
+                          src={src}
+                          width={220}
+                          height={487}
+                          alt={`${project.title} screenshot ${i + 1}`}
+                          className="w-full h-auto"
+                          unoptimized
+                        />
+                        <div className="h-4 sm:h-5 bg-black flex items-center justify-center">
+                          <div className="w-20 sm:w-24 h-1 bg-white/20 rounded-full" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Navigation arrows */}
+              {shots.length > 1 && (
+                <>
+                  <button
+                    onClick={() => scrollTo(Math.max(0, activeIdx - 1))}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-white/30 transition-all backdrop-blur-sm"
+                    aria-label="Previous screenshot"
+                  >
+                    <SvgIcon type="rightArrow" className="w-3 h-3 rotate-180" normalColor="currentColor" />
+                  </button>
+                  <button
+                    onClick={() => scrollTo(Math.min(shots.length - 1, activeIdx + 1))}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-white/30 transition-all backdrop-blur-sm"
+                    aria-label="Next screenshot"
+                  >
+                    <SvgIcon type="rightArrow" className="w-3 h-3" normalColor="currentColor" />
+                  </button>
+                </>
+              )}
             </div>
-            <p className="text-white/30 text-sm">{project.title}</p>
+
+            {/* Dot indicators */}
+            {shots.length > 1 && (
+              <div className="flex justify-center gap-2">
+                {shots.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => scrollTo(i)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      i === activeIdx
+                        ? "w-6 bg-android-green"
+                        : "bg-white/20 hover:bg-white/40"
+                    }`}
+                    aria-label={`Go to screenshot ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
-        </div>
+        ) : (
+          <div
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-3xl flex items-center justify-center border border-white/5"
+            style={{ background: `linear-gradient(135deg, ${project.accentColor}10, transparent)` }}
+          >
+            <div className="flex flex-col items-center gap-4">
+              <div
+                className="w-24 h-24 rounded-3xl flex items-center justify-center text-4xl font-bold"
+                style={{ background: `${project.accentColor}20`, color: project.accentColor }}
+              >
+                {project.title[0]}
+              </div>
+              <p className="text-white/30 text-sm">{project.title}</p>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Description */}
