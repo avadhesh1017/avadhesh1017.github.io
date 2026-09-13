@@ -203,7 +203,7 @@ export const PROJECTS: Project[] = [
     },
     category: { en: "Android App", de: "Android-App" },
     time: "2025",
-    img: "/img/mangalens-placeholder.svg",
+    img: "/img/mangalens-screenshot-2.jpg",
     description: {
       en: "A real-time screen translation overlay — captures manga pages, runs on-device OCR with ML Kit, and overlays DeepL-powered translations directly onto speech bubbles. Supports tap-to-translate and full-page modes with 13+ source languages.",
       de: "Ein Echtzeit-Bildschirm-Übersetzungs-Overlay — erfasst Manga-Seiten, führt On-Device-OCR mit ML Kit durch und blendet DeepL-gestützte Übersetzungen direkt auf Sprechblasen ein. Unterstützt Tipp-zum-Übersetzen und Ganzseitenmodus mit 13+ Quellsprachen.",
