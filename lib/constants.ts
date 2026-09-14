@@ -480,6 +480,6 @@ export const FAQ_DATA: FaqItem[] = [
 export const SPOKEN_LANGUAGES = [
   { name: { en: "Hindi", de: "Hindi" }, level: { en: "Native", de: "Muttersprache" } },
   { name: { en: "Gujarati", de: "Gujarati" }, level: { en: "Native", de: "Muttersprache" } },
-  { name: { en: "English", de: "Englisch" }, level: { en: "Fluent", de: "Fließend" } },
-  { name: { en: "German", de: "Deutsch" }, level: { en: "Intermediate", de: "Mittelstufe" } },
+  { name: { en: "English", de: "Englisch" }, level: { en: "C1", de: "C1" } },
+  { name: { en: "German", de: "Deutsch" }, level: { en: "B1", de: "B1" } },
 ] as const;
