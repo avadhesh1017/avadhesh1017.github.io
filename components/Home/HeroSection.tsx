@@ -154,19 +154,14 @@ export default function HeroSection() {
             />
 
             <div className="relative z-10 mx-auto flex h-screen flex-col justify-between px-6 container">
-              {/* Top — Android icon with glow */}
+              {/* Top — Code icon with glow */}
               <div className="flex w-full items-center justify-center gap-2 pt-8">
                 <div className="relative">
                   <div className="absolute inset-0 blur-xl bg-android-green/20 rounded-full scale-150" />
                   <svg viewBox="0 0 24 24" className="relative w-8 h-8" fill="none">
-                    <path
-                      d="M18 8H6V16C6 16.53 6.21 17.04 6.59 17.41C6.96 17.79 7.47 18 8 18H16C16.53 18 17.04 17.79 17.41 17.41C17.79 17.04 18 16.53 18 16V8Z"
-                      stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-                    />
-                    <path d="M15 3L17 6H7L9 3" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="10" cy="5.5" r="0.5" fill="#3DDC84" />
-                    <circle cx="14" cy="5.5" r="0.5" fill="#3DDC84" />
-                    <path d="M5 10V14M19 10V14M9 18V21M15 18V21" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
+                    <polyline points="16 18 22 12 16 6" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <polyline points="8 6 2 12 8 18" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <line x1="14" y1="4" x2="10" y2="20" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </div>
               </div>
@@ -194,10 +189,10 @@ export default function HeroSection() {
 
                 <div className="hero-bottom-item flex items-center rounded-lg bg-white/[0.06] p-3 backdrop-blur-md border border-white/10 shadow-lg shadow-android-green/5">
                   <ul className="grid gap-1.5 px-3 text-sm">
-                    <li className="text-android-green font-medium">Android Development</li>
-                    <li className="text-white/40">Firebase & Cloud</li>
-                    <li className="text-white/40">Material Design</li>
-                    <li className="text-white/40">MVVM Architecture</li>
+                    <li className="text-android-green font-medium">Software Engineering</li>
+                    <li className="text-white/40">Mobile & Systems</li>
+                    <li className="text-white/40">Autonomous Driving</li>
+                    <li className="text-white/40">Clean Architecture</li>
                   </ul>
                 </div>
               </div>

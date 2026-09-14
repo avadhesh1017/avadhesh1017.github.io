@@ -79,11 +79,19 @@ export default function OfferSection() {
                 }}
               >
                 <div className="flex items-center justify-center h-full">
-                  <SvgIcon
-                    type={index === 0 ? "android" : index === 1 ? "github" : "globe"}
-                    className="w-24 h-24 opacity-20"
-                    normalColor={index === 0 ? "#3DDC84" : index === 1 ? "#FF9800" : "#2196F3"}
-                  />
+                  {index === 0 ? (
+                    <svg viewBox="0 0 24 24" className="w-24 h-24 opacity-20" fill="none">
+                      <polyline points="16 18 22 12 16 6" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <polyline points="8 6 2 12 8 18" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <line x1="14" y1="4" x2="10" y2="20" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                  ) : (
+                    <SvgIcon
+                      type={index === 1 ? "globe" : "github"}
+                      className="w-24 h-24 opacity-20"
+                      normalColor={index === 1 ? "#FF9800" : "#2196F3"}
+                    />
+                  )}
                 </div>
               </div>
             </div>

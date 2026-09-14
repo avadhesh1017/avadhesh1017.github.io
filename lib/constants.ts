@@ -14,8 +14,8 @@ export const INFO = [
   {
     title: { en: "Innovate", de: "Innovieren" },
     description: {
-      en: "Embrace modern Android patterns and foster creativity in every step of the journey.",
-      de: "Moderne Android-Muster annehmen und Kreativität in jedem Schritt fördern.",
+      en: "Embrace modern engineering patterns and foster creativity in every step of the journey.",
+      de: "Moderne Engineering-Muster annehmen und Kreativität in jedem Schritt fördern.",
     },
   },
   {
@@ -260,24 +260,24 @@ export const PROJECTS: Project[] = [
    ──────────────────────────────────────────── */
 export const OFFER_INFO = [
   {
-    title: "ANDROID",
+    title: "SOFTWARE",
     description: {
-      en: "Building native Android applications with Java, Firebase, and Material Design — engineered for performance and offline reliability.",
-      de: "Entwicklung nativer Android-Anwendungen mit Java, Firebase und Material Design — entwickelt für Performance und Offline-Zuverlässigkeit.",
+      en: "Building production-quality applications with Java, Python, and modern frameworks — engineered for performance, scalability, and maintainability.",
+      de: "Entwicklung produktionsreifer Anwendungen mit Java, Python und modernen Frameworks — entwickelt für Performance, Skalierbarkeit und Wartbarkeit.",
     },
   },
   {
-    title: "FIREBASE",
+    title: "SYSTEMS",
     description: {
-      en: "Integrating authentication, real-time databases, cloud messaging, and analytics for seamless cloud-connected mobile experiences.",
-      de: "Integration von Authentifizierung, Echtzeit-Datenbanken, Cloud Messaging und Analytics für nahtlose, cloud-verbundene mobile Erlebnisse.",
+      en: "Working with sensor data, radar processing, and real-time architectures — from autonomous driving pipelines to cloud-connected backends.",
+      de: "Arbeit mit Sensordaten, Radarverarbeitung und Echtzeitarchitekturen — von autonomen Fahrpipelines bis zu cloud-verbundenen Backends.",
     },
   },
   {
-    title: "UI/UX",
+    title: "MOBILE",
     description: {
-      en: "Designing intuitive, accessible interfaces with Material Design 3 principles — clean layouts, thoughtful motion, and user-first thinking.",
-      de: "Gestaltung intuitiver, barrierefreier Oberflächen nach Material Design 3 Prinzipien — klare Layouts, durchdachte Animationen und nutzerzentriertes Denken.",
+      en: "Designing and building native Android apps with clean architecture, offline-first databases, and intuitive Material Design interfaces.",
+      de: "Entwurf und Entwicklung nativer Android-Apps mit sauberer Architektur, Offline-First-Datenbanken und intuitiven Material Design Oberflächen.",
     },
   },
 ] as const;
@@ -287,36 +287,36 @@ export const OFFER_INFO = [
    ──────────────────────────────────────────── */
 export const SKILL_CATEGORIES = [
   {
-    category: { en: "Android & Mobile", de: "Android & Mobil" },
+    category: { en: "Languages & Frameworks", de: "Sprachen & Frameworks" },
     skills: [
-      "Android Studio",
       "Java",
+      "Python",
       "Kotlin",
-      "XML Layouts",
-      "Material Design 3",
-      "MVVM Architecture",
+      "C/C++",
+      ".NET",
+      "SQL",
     ],
   },
   {
-    category: { en: "Backend & Data", de: "Backend & Daten" },
+    category: { en: "Mobile & Backend", de: "Mobile & Backend" },
     skills: [
-      "Firebase Auth & Firestore",
+      "Android Studio & SDK",
+      "Firebase (Auth, Firestore, FCM)",
       "Room Database (SQLite)",
-      "FCM Push Notifications",
-      "WorkManager",
-      "LiveData & ViewModel",
-      "Kotlin Coroutines & Flow",
+      "MVVM Architecture",
+      "Material Design 3",
+      "REST APIs",
     ],
   },
   {
-    category: { en: "Tools & Deployment", de: "Tools & Deployment" },
+    category: { en: "Tools & Systems", de: "Tools & Systeme" },
     skills: [
       "Git & GitHub",
-      "Gradle Build System",
-      "Android SDK",
-      "MPAndroidChart",
-      ".NET",
-      "UI/UX Design (Figma)",
+      "Linux / CLI",
+      "MATLAB / Simulink",
+      "Sensor Fusion & Radar",
+      "Docker",
+      "Figma",
     ],
   },
 ] as const;
@@ -327,20 +327,20 @@ export const SKILL_CATEGORIES = [
 export const CAREER_TIMELINE = [
   {
     period: "2025 – Present",
-    role: { en: "Master's — Autonomous Driving", de: "Master — Autonomous Driving" },
+    role: { en: "M.Sc. Autonomous Driving", de: "M.Sc. Autonomous Driving" },
     company: { en: "University in Germany", de: "Universität in Deutschland" },
     description: {
-      en: "Pursuing Master's degree in Autonomous Driving, combining software engineering with cutting-edge automotive technology research.",
-      de: "Masterstudium in Autonomous Driving, Kombination von Softwareentwicklung mit modernster Automobiltechnologie-Forschung.",
+      en: "Studying radar signal processing, sensor fusion, real-time systems, and vehicle perception — bridging software engineering with automotive intelligence.",
+      de: "Studium von Radarsignalverarbeitung, Sensorfusion, Echtzeitsystemen und Fahrzeugwahrnehmung — Verbindung von Softwareentwicklung mit automobiler Intelligenz.",
     },
   },
   {
     period: "2024 – 2025",
-    role: { en: "Application Developer", de: "Anwendungsentwickler" },
+    role: { en: "Software Developer", de: "Softwareentwickler" },
     company: { en: "Professional Projects", de: "Berufliche Projekte" },
     description: {
-      en: "Development and maintenance of Android applications with Android Studio and Java. Practical experience in application development, databases, and software engineering.",
-      de: "Entwicklung und Wartung von Android-Anwendungen mit Android Studio und Java. Praktische Erfahrung in Anwendungsentwicklung, Datenbanken und Softwareentwicklung.",
+      en: "Built and shipped multiple production applications — mobile apps with Firebase backends, offline-first databases, and real-time sync. Hands-on experience across the full development lifecycle.",
+      de: "Entwicklung und Veröffentlichung mehrerer Produktionsanwendungen — mobile Apps mit Firebase-Backends, Offline-First-Datenbanken und Echtzeit-Synchronisation. Praxiserfahrung über den gesamten Entwicklungszyklus.",
     },
   },
   {
@@ -359,37 +359,37 @@ export const CAREER_TIMELINE = [
    ──────────────────────────────────────────── */
 export const SERVICES = [
   {
-    projectType: { en: "Android App Development", de: "Android-App-Entwicklung" },
+    projectType: { en: "Application Development", de: "Anwendungsentwicklung" },
     features: {
       en: [
-        "Native Android with Java & Material Design 3",
-        "Firebase Auth, Firestore & Cloud Messaging",
-        "MVVM Architecture with Room / SQLite",
-        "Play Store-ready APK & deployment",
+        "Native Android with Java, Kotlin & Material Design",
+        "Backend integration with Firebase, REST APIs & databases",
+        "Clean architecture (MVVM) with offline-first design",
+        "End-to-end delivery from concept to deployment",
       ],
       de: [
-        "Natives Android mit Java & Material Design 3",
-        "Firebase Auth, Firestore & Cloud Messaging",
-        "MVVM-Architektur mit Room / SQLite",
-        "Play Store-fertige APK & Deployment",
+        "Natives Android mit Java, Kotlin & Material Design",
+        "Backend-Integration mit Firebase, REST APIs & Datenbanken",
+        "Saubere Architektur (MVVM) mit Offline-First Design",
+        "End-to-End-Lieferung vom Konzept bis zum Deployment",
       ],
     },
     img: "/img/taskflow-screenshot.jpg",
   },
   {
-    projectType: { en: "UI/UX Design & Prototyping", de: "UI/UX Design & Prototyping" },
+    projectType: { en: "Software Engineering & Systems", de: "Software Engineering & Systeme" },
     features: {
       en: [
-        "Figma high-fidelity screen design",
-        "Material Design component systems",
-        "Interactive prototyping & user flows",
-        "Responsive multi-device layouts",
+        "Data processing pipelines in Python & C++",
+        "Sensor data analysis & real-time signal processing",
+        "Version control, CI/CD, and documentation",
+        "UI/UX prototyping with Figma",
       ],
       de: [
-        "Figma High-Fidelity Screendesign",
-        "Material Design Komponentensysteme",
-        "Interaktives Prototyping & User Flows",
-        "Responsive Multi-Device Layouts",
+        "Datenverarbeitungs-Pipelines in Python & C++",
+        "Sensordatenanalyse & Echtzeit-Signalverarbeitung",
+        "Versionskontrolle, CI/CD und Dokumentation",
+        "UI/UX-Prototyping mit Figma",
       ],
     },
     img: "/img/notyourmoney-screenshot.jpg",
@@ -409,67 +409,67 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 1,
     question: {
-      en: "What technologies do you specialize in?",
-      de: "Auf welche Technologien sind Sie spezialisiert?",
+      en: "What technologies do you work with?",
+      de: "Mit welchen Technologien arbeiten Sie?",
     },
     answer: {
-      en: "I specialize in native Android development with Java, Android Studio, Firebase (Auth, Firestore, FCM), Room Database, Material Design 3, MVVM architecture, and WorkManager for background tasks.",
-      de: "Ich bin spezialisiert auf native Android-Entwicklung mit Java, Android Studio, Firebase (Auth, Firestore, FCM), Room-Datenbank, Material Design 3, MVVM-Architektur und WorkManager für Hintergrundaufgaben.",
+      en: "I work with Java, Python, Kotlin, and C/C++ across different domains. On the mobile side: Android Studio, Firebase, Room/SQLite, and Material Design. On the systems side: MATLAB, sensor processing, and data pipelines. I pick the right tool for the problem.",
+      de: "Ich arbeite mit Java, Python, Kotlin und C/C++ in verschiedenen Bereichen. Im Mobilbereich: Android Studio, Firebase, Room/SQLite und Material Design. Im Systembereich: MATLAB, Sensorverarbeitung und Datenpipelines. Ich wähle das richtige Werkzeug für das Problem.",
     },
   },
   {
     id: 2,
     question: {
-      en: "Do you build apps that work offline?",
-      de: "Entwickeln Sie Apps, die offline funktionieren?",
+      en: "What's your background in autonomous driving?",
+      de: "Was ist Ihr Hintergrund im Bereich Autonomous Driving?",
     },
     answer: {
-      en: "Yes! I follow an offline-first approach using Room Database for local storage with LiveData for reactive UI updates. Firebase Firestore provides cloud sync when connectivity is available.",
-      de: "Ja! Ich verfolge einen Offline-First-Ansatz mit Room-Datenbank für lokale Speicherung und LiveData für reaktive UI-Updates. Firebase Firestore bietet Cloud-Synchronisation, wenn eine Verbindung verfügbar ist.",
+      en: "I'm pursuing a Master's in Autonomous Driving in Germany, working with radar signal processing, sensor fusion, and real-time perception systems. It's a mix of signal processing, software engineering, and applied math.",
+      de: "Ich absolviere einen Master in Autonomous Driving in Deutschland und arbeite mit Radarsignalverarbeitung, Sensorfusion und Echtzeit-Wahrnehmungssystemen. Es ist eine Mischung aus Signalverarbeitung, Softwareentwicklung und angewandter Mathematik.",
     },
   },
   {
     id: 3,
     question: {
-      en: "What is your typical project delivery timeline?",
-      de: "Wie sieht Ihr typischer Projekt-Zeitrahmen aus?",
+      en: "Can you work on backend or data-heavy projects?",
+      de: "Können Sie an Backend- oder datenintensiven Projekten arbeiten?",
     },
     answer: {
-      en: "Small utility apps take 2–3 weeks, feature-rich apps with Firebase integration take 4–6 weeks, and complex multi-module applications take 6–10 weeks with regular demo milestones.",
-      de: "Kleine Utility-Apps dauern 2–3 Wochen, funktionsreiche Apps mit Firebase-Integration 4–6 Wochen und komplexe Multi-Modul-Anwendungen 6–10 Wochen mit regelmäßigen Demo-Meilensteinen.",
+      en: "Yes. I have hands-on experience with Firebase backends, SQLite databases, REST APIs, and data processing in Python. I'm comfortable working across the stack — not just the UI layer.",
+      de: "Ja. Ich habe praktische Erfahrung mit Firebase-Backends, SQLite-Datenbanken, REST APIs und Datenverarbeitung in Python. Ich arbeite gerne über den gesamten Stack — nicht nur die UI-Ebene.",
     },
   },
   {
     id: 4,
     question: {
-      en: "Can you publish apps to the Google Play Store?",
-      de: "Können Sie Apps im Google Play Store veröffentlichen?",
+      en: "Do you only build mobile apps?",
+      de: "Bauen Sie nur mobile Apps?",
     },
     answer: {
-      en: "Yes. I handle the full lifecycle from development through Play Store listing — including APK signing, store listing optimization, screenshots, and release management.",
-      de: "Ja. Ich übernehme den gesamten Lebenszyklus von der Entwicklung bis zur Play Store-Listung — einschließlich APK-Signierung, Store-Listing-Optimierung, Screenshots und Release-Management.",
+      en: "No. Mobile is one of my strengths, but I'm equally interested in systems programming, data pipelines, and engineering tools. I'm looking for roles where I can write meaningful code — the platform matters less than the problem.",
+      de: "Nein. Mobile ist eine meiner Stärken, aber ich interessiere mich ebenso für Systemprogrammierung, Datenpipelines und Engineering-Tools. Ich suche Rollen, in denen ich bedeutungsvollen Code schreiben kann — die Plattform ist weniger wichtig als das Problem.",
     },
   },
   {
     id: 5,
     question: {
-      en: "Do you offer UI/UX design alongside development?",
-      de: "Bieten Sie UI/UX-Design neben der Entwicklung an?",
+      en: "What kind of roles are you looking for?",
+      de: "Nach welcher Art von Stelle suchen Sie?",
     },
     answer: {
-      en: "Yes. I provide end-to-end design and engineering — from Figma prototypes and Material Design component systems to full native Android implementation with polished interactions.",
-      de: "Ja. Ich biete End-to-End Design und Entwicklung — von Figma-Prototypen und Material Design Komponentensystemen bis zur vollständigen nativen Android-Implementierung mit ausgefeilten Interaktionen.",
+      en: "Software engineering roles where I can build, ship, and improve real products — whether that's mobile apps, embedded systems, tooling, or backend services. I value clean code, good architecture, and teams that care about quality.",
+      de: "Software-Engineering-Rollen, in denen ich echte Produkte bauen, veröffentlichen und verbessern kann — ob mobile Apps, Embedded-Systeme, Tooling oder Backend-Services. Ich schätze sauberen Code, gute Architektur und Teams, die Wert auf Qualität legen.",
     },
   },
   {
     id: 6,
     question: {
-      en: "What languages do you support in your apps?",
-      de: "Welche Sprachen unterstützen Sie in Ihren Apps?",
+      en: "Do you speak German?",
+      de: "Sprechen Sie Deutsch?",
     },
     answer: {
-      en: "I build multi-language apps using Android's built-in localization system (strings.xml). My apps currently support English and German, and adding more languages is straightforward.",
-      de: "Ich entwickle mehrsprachige Apps mit Androids eingebautem Lokalisierungssystem (strings.xml). Meine Apps unterstützen derzeit Englisch und Deutsch, und weitere Sprachen hinzuzufügen ist unkompliziert.",
+      en: "Yes — B1 level and actively improving. I can communicate in a German-speaking workplace and handle everyday conversations. My working language is English (C1).",
+      de: "Ja — B1-Niveau und ich verbessere mich aktiv. Ich kann in einem deutschsprachigen Arbeitsumfeld kommunizieren und Alltagsgespräche führen. Meine Arbeitssprache ist Englisch (C1).",
     },
   },
 ];

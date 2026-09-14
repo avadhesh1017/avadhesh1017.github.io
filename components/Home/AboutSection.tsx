@@ -7,16 +7,15 @@ import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
 import { useLang, t } from "@/lib/i18n";
-import { CAREER_TIMELINE } from "@/lib/constants";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const TAGS = ["// Android", "// Firebase", "// Material Design"];
+const TAGS = ["// Software", "// Systems", "// Architecture"];
 
 const STATS = [
   { title: { en: "Years of Experience", de: "Jahre Erfahrung" }, value: "2+" },
-  { title: { en: "Apps Built", de: "Apps entwickelt" }, value: "5+" },
-  { title: { en: "Technologies", de: "Technologien" }, value: "12+" },
+  { title: { en: "Projects Built", de: "Projekte entwickelt" }, value: "5+" },
+  { title: { en: "Technologies", de: "Technologien" }, value: "15+" },
 ];
 
 export default function AboutSection() {
@@ -63,11 +62,6 @@ export default function AboutSection() {
       gsap.from(".about-stat-item", {
         scrollTrigger: { trigger: ".about-stats-container", start: "top 85%", toggleActions: "play none none reverse" },
         x: 25, opacity: 0, duration: 0.65, stagger: 0.1, ease: "power2.out",
-      });
-
-      gsap.from(".about-exp-item", {
-        scrollTrigger: { trigger: ".about-exp-container", start: "top 85%", toggleActions: "play none none reverse" },
-        x: -25, opacity: 0, duration: 0.7, stagger: 0.15, ease: "power3.out",
       });
 
       gsap.from(".about-photo-wrapper", {
@@ -148,30 +142,6 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Experience timeline */}
-            <div className="grid gap-6 about-exp-container">
-              <h3 className="font-medium text-black">
-                {t("about.experience", lang)} <br />
-                <span className="text-dim-text">{t("about.expSub", lang)}</span>
-              </h3>
-              <div className="grid gap-6">
-                {CAREER_TIMELINE.slice(0, 2).map((item, index) => (
-                  <div
-                    key={index}
-                    className="grid gap-1 pl-4 border-l-2 border-solid border-android-green/50 ml-6 about-exp-item"
-                  >
-                    <div className="flex justify-between">
-                      <h4 className="font-medium text-xl sm:text-2xl text-black">
-                        {item.role[lang]}
-                      </h4>
-                      <p className="text-dim-text text-sm">{item.period}</p>
-                    </div>
-                    <p className="text-dim-text text-sm">{item.company[lang]}</p>
-                    <p className="text-dim-text">{item.description[lang]}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Photo */}

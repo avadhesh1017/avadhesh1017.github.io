@@ -21,30 +21,30 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Avadhesh Ghevariya — Android Application Developer",
+    default: "Avadhesh Ghevariya — Software Engineer",
     template: "%s | Avadhesh Ghevariya",
   },
   description:
-    "Portfolio of Avadhesh Ghevariya — Android Developer specializing in Java, Firebase, Material Design 3, MVVM architecture, and mobile application engineering.",
+    "Portfolio of Avadhesh Ghevariya — Software Engineer with experience in mobile development, autonomous driving systems, and clean software architecture.",
   keywords: [
     "Avadhesh Ghevariya",
-    "Android Developer",
+    "Software Engineer",
     "Java Developer",
-    "Firebase",
-    "Material Design",
-    "Mobile App Developer",
-    "Android Studio",
-    "MVVM",
-    "Application Developer",
+    "Python",
+    "Mobile Development",
+    "Autonomous Driving",
+    "Sensor Fusion",
+    "Software Developer",
+    "Full Stack",
   ],
   authors: [{ name: "Avadhesh Ghevariya" }],
   creator: "Avadhesh Ghevariya",
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Avadhesh Ghevariya — Android Application Developer",
+    title: "Avadhesh Ghevariya — Software Engineer",
     description:
-      "Building native Android applications with clean architecture, Firebase integration, and Material Design.",
+      "Building production-quality software — from mobile apps to sensor-driven systems — with clean architecture and strong engineering fundamentals.",
   },
   robots: {
     index: true,

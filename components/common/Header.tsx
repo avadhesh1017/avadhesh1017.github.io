@@ -100,7 +100,10 @@ export default function Header() {
         <div className="container mx-auto sm:px-8 ex-sm:px-6 px-4 flex w-full items-center justify-between py-5">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <SvgIcon type="android" className="w-7 h-7" normalColor="#3DDC84" />
+            <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
+              <polyline points="16 18 22 12 16 6" stroke="#3DDC84" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <polyline points="8 6 2 12 8 18" stroke="#3DDC84" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
             <span className="font-bold text-lg text-white hidden sm:block">AG</span>
           </Link>
 
