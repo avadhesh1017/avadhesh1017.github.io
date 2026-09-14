@@ -13,7 +13,6 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const TAGS = ["// Software", "// Systems", "// Architecture"];
 
 const STATS = [
-  { title: { en: "Years of Experience", de: "Jahre Erfahrung" }, value: "2+" },
   { title: { en: "Projects Built", de: "Projekte entwickelt" }, value: "5+" },
   { title: { en: "Technologies", de: "Technologien" }, value: "15+" },
 ];
