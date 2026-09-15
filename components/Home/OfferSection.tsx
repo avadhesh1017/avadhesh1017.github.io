@@ -46,60 +46,57 @@ export default function OfferSection() {
   );
 
   return (
-    <section ref={sectionRef} className="relative section-container">
-      {/* Sticky title stack */}
-      <div className="z-10 pointer-events-none sticky flex justify-center items-center -top-10 h-screen">
-        <div className="z-20 h-fit grid gap-10 pointer-events-auto">
-          <div className="section-label-wrapper justify-center">
-            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
-            <p className="section-label-text">{t("offer.label", lang)}</p>
-          </div>
-
-          <div className="grid gap-4 text-center">
-            {OFFER_INFO.map((offer, index) => (
-              <h3
-                key={offer.title}
-                className={`text-4xl sm:text-5xl md:text-7xl font-semibold transition-all duration-500 ${
-                  activeIndex === index ? "text-white" : "text-muted-text"
-                }`}
-              >
-                {offer.title}
-              </h3>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="relative mb-20" style={{ height: `${OFFER_INFO.length * 100}vh` }}>
-        {/* Panels with premium images */}
-        {OFFER_INFO.map((offer, index) => (
-          <div key={offer.title} className="h-screen overflow-hidden">
-            <div className="z-0 grid grid-cols-1 md:grid-cols-3">
-              <div
-                className={`w-full h-[300px] rounded-2xl mx-4 overflow-hidden relative ${
-                  index === 1 ? "md:col-start-3" : ""
-                }`}
-              >
-                <Image
-                  src={OFFER_IMAGES[index]}
-                  alt={offer.title}
-                  fill
-                  unoptimized
-                  className="object-cover opacity-30 hover:opacity-50 transition-opacity duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-dark-bg/80" />
-              </div>
-            </div>
+    <section ref={sectionRef} className="relative">
+      {/* Sticky viewport — stays on screen while scrolling through spacer */}
+      <div className="sticky top-0 h-screen overflow-hidden">
+        {/* Background images that crossfade */}
+        {OFFER_IMAGES.map((src, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 transition-opacity duration-700"
+            style={{ opacity: activeIndex === index ? 0.25 : 0 }}
+          >
+            <Image
+              src={src}
+              alt=""
+              fill
+              unoptimized
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/70" />
           </div>
         ))}
 
-        {/* Sticky description */}
-        <div className="flex justify-center sticky bottom-20 z-20 pointer-events-none px-6 text-center">
-          <p className="text-base md:text-lg text-white/80 max-w-[417px] transition-all duration-500 pointer-events-auto">
-            {OFFER_INFO[activeIndex].description[lang]}
-          </p>
+        {/* Centered title stack */}
+        <div className="relative z-10 flex items-center justify-center h-full px-4">
+          <div className="grid gap-10 text-center">
+            <div className="section-label-wrapper justify-center">
+              <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
+              <p className="section-label-text">{t("offer.label", lang)}</p>
+            </div>
+
+            <div className="grid gap-4">
+              {OFFER_INFO.map((offer, index) => (
+                <h3
+                  key={offer.title}
+                  className={`text-4xl sm:text-5xl md:text-7xl font-semibold transition-all duration-500 ${
+                    activeIndex === index ? "text-white" : "text-muted-text"
+                  }`}
+                >
+                  {offer.title}
+                </h3>
+              ))}
+            </div>
+
+            <p className="text-base md:text-lg text-white/70 max-w-[480px] mx-auto transition-all duration-500">
+              {OFFER_INFO[activeIndex].description[lang]}
+            </p>
+          </div>
         </div>
       </div>
+
+      {/* Scroll spacer — drives the scroll progress */}
+      <div style={{ height: `${OFFER_INFO.length * 100}vh` }} />
     </section>
   );
 }

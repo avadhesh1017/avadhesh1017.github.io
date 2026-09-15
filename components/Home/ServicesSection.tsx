@@ -68,17 +68,22 @@ export default function ServicesSection() {
               index % 2 !== 0 ? "lg:flex-row-reverse" : ""
             }`}
           >
-            {/* App screenshot with tech background */}
-            <div className="w-full lg:min-w-[51%] relative min-h-[300px] lg:min-h-[440px] bg-gradient-to-br from-[#111] to-black flex items-center justify-center overflow-hidden">
-              <Image
-                src="/img/tech-accent.png"
-                alt=""
-                fill
-                unoptimized
-                className="object-cover opacity-15"
+            {/* App screenshot with clean dark background */}
+            <div className="w-full lg:min-w-[51%] relative min-h-[300px] lg:min-h-[440px] flex items-center justify-center overflow-hidden"
+              style={{
+                background: `radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 70%, #050505 100%)`,
+              }}
+            >
+              {/* Subtle geometric grid lines */}
+              <div
+                className="absolute inset-0 opacity-[0.04]"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                  backgroundSize: "60px 60px",
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
-              <div className="relative z-10 w-[180px] sm:w-[200px] lg:w-[220px] rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
+              <div className="relative z-10 w-[180px] sm:w-[200px] lg:w-[220px] rounded-2xl overflow-hidden shadow-2xl shadow-black/60 border border-white/10">
                 <Image
                   src={item.img}
                   width={220}
