@@ -1,7 +1,6 @@
 import GridLines from "@/components/common/GridLines";
 import AboutSection from "@/components/Home/AboutSection";
 import ContactSection from "@/components/Home/ContactSection";
-import FaqSection from "@/components/Home/FaqSection";
 import HeroSection from "@/components/Home/HeroSection";
 import InfoSection from "@/components/Home/InfoSection";
 import OfferSection from "@/components/Home/OfferSection";
@@ -21,7 +20,6 @@ export default function Home() {
       <AboutSection />
       <div className="bg-dark-bg">
         <ServicesSection />
-        <FaqSection />
       </div>
       <ContactSection />
     </main>

@@ -13,7 +13,7 @@ export default function ProjectsPage() {
       <section className="section-container pt-10">
         <div className="grid gap-6">
           <div className="section-label-wrapper">
-            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#3DDC84" />
+            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
             <p className="section-label-text">{t("portfolio.label", lang)}</p>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium text-white">
@@ -31,17 +31,17 @@ export default function ProjectsPage() {
             <Link
               key={project.id}
               href={`/projects/${project.id}`}
-              className="group p-5 bg-card-bg rounded-2xl border border-white/5 hover:border-android-green/30 transition-all duration-300"
+              className="group p-5 bg-card-bg rounded-2xl border border-white/5 hover:border-white/20 transition-all duration-300"
             >
               {/* Header */}
               <div className="flex justify-between items-center pb-4 border-b border-white/5 mb-4">
                 <div>
-                  <h2 className="font-medium text-xl sm:text-2xl text-white group-hover:text-android-green transition-colors">
+                  <h2 className="font-medium text-xl sm:text-2xl text-white group-hover:text-white/80 transition-colors">
                     {project.title}
                   </h2>
                   <p className="text-sm text-muted-text mt-1">{project.category[lang]} • {project.time}</p>
                 </div>
-                <div className="py-1.5 px-5 border border-white/10 rounded-full group-hover:border-android-green/40 group-hover:bg-android-green/10 transition-colors">
+                <div className="py-1.5 px-5 border border-white/10 rounded-full group-hover:border-white/30 group-hover:bg-white/10 transition-colors">
                   <SvgIcon type="rightArrow" className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" normalColor="white" />
                 </div>
               </div>
@@ -73,8 +73,8 @@ export default function ProjectsPage() {
 
               {/* GitHub link */}
               {project.github && (
-                <div className="mt-3 flex items-center gap-2 text-xs text-android-green/60">
-                  <SvgIcon type="github" className="w-3.5 h-3.5" normalColor="#3DDC84" />
+                <div className="mt-3 flex items-center gap-2 text-xs text-white/40">
+                  <SvgIcon type="github" className="w-3.5 h-3.5" normalColor="#999999" />
                   <span>View on GitHub</span>
                 </div>
               )}

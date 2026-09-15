@@ -11,21 +11,21 @@
   --breakpoint-2xl: 89.9375rem;
 
   --color-dark-bg: #050505;
-  --color-darker-bg: #0d0d0d;
-  --color-card-bg: #1a1a1a;
-  --color-muted-text: #8b8b8b;
-  --color-dim-text: #727272;
+  --color-darker-bg: #0a0a0a;
+  --color-card-bg: #111111;
+  --color-muted-text: #666666;
+  --color-dim-text: #555555;
   --color-light-heading: #f5f5f5;
-  --color-light-bg: #f7f7f7;
-  --color-soft-text: #e6e6e6;
+  --color-light-bg: #fafafa;
+  --color-soft-text: #d4d4d4;
   --color-ink: #1a1a1a;
   --color-ink-soft: #2d2d2d;
-  --color-android-green: #3ddc84;
-  --color-android-dark: #1b5e20;
+  --color-android-green: #ffffff;
+  --color-android-dark: #999999;
 
-  --shadow-card: 0px 0.6px 0.6px -1.25px #0000002e;
-  --shadow-glow: 0px 12px 24px 0px rgba(61, 220, 132, 0.12);
-  --shadow-glow-white: 0px 12px 24px 0px rgba(255, 255, 255, 0.12);
+  --shadow-card: 0px 1px 2px -1px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0px 12px 24px 0px rgba(255, 255, 255, 0.06);
+  --shadow-glow-white: 0px 12px 24px 0px rgba(255, 255, 255, 0.08);
 
   --radius-btn: 38px;
   --radius-pill: 100px;
@@ -51,10 +51,10 @@
     @apply rounded-btn bg-white px-[38px] py-4 text-lg font-semibold text-black transition-all hover:opacity-90 hover:scale-[1.02];
   }
   .btn-green {
-    @apply rounded-btn bg-android-green px-[38px] py-4 text-lg font-semibold text-black transition-all hover:opacity-90 hover:scale-[1.02];
+    @apply rounded-btn bg-white px-[38px] py-4 text-lg font-semibold text-black transition-all hover:opacity-90 hover:scale-[1.02];
   }
   .btn-ghost {
-    @apply h-fit items-center flex gap-2 px-4 py-3.5 rounded-pill border border-solid border-white text-white transition-all hover:bg-white/10;
+    @apply h-fit items-center flex gap-2 px-4 py-3.5 rounded-pill border border-solid border-white/30 text-white transition-all hover:bg-white/10 hover:border-white/60;
   }
   .curve-wrap {
     @apply absolute top-0 left-0 right-0 z-20 w-full overflow-hidden pointer-events-none;
@@ -63,13 +63,13 @@
     @apply p-3 rounded-full bg-black/15 backdrop-blur-[5px] transition-transform hover:scale-110;
   }
   .social-icon-light {
-    @apply p-3 rounded-full bg-white/15 backdrop-blur-[5px] transition-transform hover:scale-110;
+    @apply p-3 rounded-full bg-white/10 backdrop-blur-[5px] transition-transform hover:scale-110;
   }
   .gradient-btn-white {
     background: linear-gradient(117.64deg, #ffffff 19%, #e6e6e6 75%);
   }
   .gradient-btn-green {
-    background: linear-gradient(117.64deg, #3ddc84 19%, #2e7d32 75%);
+    background: linear-gradient(117.64deg, #ffffff 19%, #cccccc 75%);
   }
 }
 
@@ -86,21 +86,21 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #222;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #444;
 }
 
 /* Selection */
 ::selection {
-  background: #3ddc84;
+  background: #fff;
   color: #000;
 }

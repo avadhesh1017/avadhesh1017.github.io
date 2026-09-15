@@ -78,7 +78,6 @@ export default function HeroSection() {
         }
       );
 
-      /* Parallax drift on the hero background image */
       gsap.to(".hero-bg-img", {
         yPercent: 12,
         ease: "none",
@@ -90,7 +89,6 @@ export default function HeroSection() {
         },
       });
 
-      /* Fade-in the name + badge on load */
       gsap.from(".hero-name", {
         y: 60,
         opacity: 0,
@@ -120,58 +118,49 @@ export default function HeroSection() {
   return (
     <section id="home-hero" ref={sectionRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
-        {/* Animated background strips */}
+        {/* Subtle vertical lines */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-[10%] w-px h-full bg-gradient-to-b from-transparent via-android-green/20 to-transparent" />
+          <div className="absolute top-0 left-[10%] w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />
           <div className="absolute top-0 left-[30%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="absolute top-0 left-[60%] w-px h-full bg-gradient-to-b from-transparent via-android-green/10 to-transparent" />
+          <div className="absolute top-0 left-[60%] w-px h-full bg-gradient-to-b from-transparent via-white/8 to-transparent" />
           <div className="absolute top-0 left-[85%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
         </div>
 
         <div ref={heroRef} className="will-change-transform">
           <div className="relative h-screen overflow-hidden bg-black">
-            {/* AI-generated hero background */}
             <Image
               src="/img/hero-bg.png"
               alt=""
               fill
               priority
               unoptimized
-              className="hero-bg-img object-cover object-center opacity-60"
+              className="hero-bg-img object-cover object-center opacity-40"
               sizes="100vw"
             />
 
-            {/* Gradient overlays for depth and text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/70" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/70" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
 
-            {/* Subtle animated scanlines */}
+            {/* Subtle noise texture */}
             <div
-              className="absolute inset-0 opacity-[0.015] pointer-events-none"
+              className="absolute inset-0 opacity-[0.02] pointer-events-none"
               style={{
-                backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(61,220,132,0.15) 2px, rgba(61,220,132,0.15) 4px)`,
+                backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.08) 2px, rgba(255,255,255,0.08) 4px)`,
               }}
             />
 
             <div className="relative z-10 mx-auto flex h-screen flex-col justify-between px-6 container">
-              {/* Top — Code icon with glow */}
+              {/* Top — Minimal logo */}
               <div className="flex w-full items-center justify-center gap-2 pt-8">
-                <div className="relative">
-                  <div className="absolute inset-0 blur-xl bg-android-green/20 rounded-full scale-150" />
-                  <svg viewBox="0 0 24 24" className="relative w-8 h-8" fill="none">
-                    <polyline points="16 18 22 12 16 6" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <polyline points="8 6 2 12 8 18" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    <line x1="14" y1="4" x2="10" y2="20" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <span className="font-bold text-2xl text-white/80 tracking-tight">A<span className="text-white/30">.</span></span>
               </div>
 
-              {/* Center — Big name with glow effect */}
+              {/* Center — Big name */}
               <div className="flex flex-col items-center gap-4">
-                <h1 className="hero-name text-center font-bold text-white text-5xl mg-sm:text-6xl sm:text-8xl md:text-[140px] lg:text-[200px] leading-none tracking-tight drop-shadow-[0_0_80px_rgba(61,220,132,0.15)]">
+                <h1 className="hero-name text-center font-bold text-white text-5xl mg-sm:text-6xl sm:text-8xl md:text-[140px] lg:text-[200px] leading-none tracking-tight drop-shadow-[0_0_80px_rgba(255,255,255,0.08)]">
                   AVADHESH
                 </h1>
-                <p className="hero-role text-android-green font-medium text-lg sm:text-xl md:text-2xl tracking-widest uppercase">
+                <p className="hero-role text-white/70 font-medium text-lg sm:text-xl md:text-2xl tracking-widest uppercase">
                   {t("hero.role", lang)}
                 </p>
               </div>
@@ -183,13 +172,13 @@ export default function HeroSection() {
                 </Link>
 
                 <address className="hero-bottom-item not-italic font-medium text-white text-center md:text-left">
-                  <p className="text-white/60">avdheshghevariya01@gmail.com</p>
+                  <p className="text-white/40">avdheshghevariya01@gmail.com</p>
                   <p>{t("hero.location", lang)}</p>
                 </address>
 
-                <div className="hero-bottom-item flex items-center rounded-lg bg-white/[0.06] p-3 backdrop-blur-md border border-white/10 shadow-lg shadow-android-green/5">
+                <div className="hero-bottom-item flex items-center rounded-lg bg-white/[0.06] p-3 backdrop-blur-md border border-white/10">
                   <ul className="grid gap-1.5 px-3 text-sm">
-                    <li className="text-android-green font-medium">Software Engineering</li>
+                    <li className="text-white font-medium">Software Engineering</li>
                     <li className="text-white/40">Mobile & Systems</li>
                     <li className="text-white/40">Autonomous Driving</li>
                     <li className="text-white/40">Clean Architecture</li>

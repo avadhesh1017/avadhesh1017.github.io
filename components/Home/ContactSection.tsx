@@ -56,7 +56,7 @@ export default function ContactSection() {
         {/* Header */}
         <div className="contact-header-wrapper grid gap-4 text-center">
           <div className="section-label-wrapper justify-center contact-header-item">
-            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#3DDC84" />
+            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
             <p className="section-label-text">{t("contact.label", lang)}</p>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-[56px] text-light-heading contact-header-item leading-tight">
@@ -76,7 +76,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 required
-                className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-android-green/50 focus:outline-none transition-colors"
+                className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-white/40 focus:outline-none transition-colors"
                 placeholder={lang === "en" ? "John Doe" : "Max Mustermann"}
               />
             </div>
@@ -85,7 +85,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 required
-                className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-android-green/50 focus:outline-none transition-colors"
+                className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-white/40 focus:outline-none transition-colors"
                 placeholder="you@example.com"
               />
             </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
               <textarea
                 required
                 rows={5}
-                className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-android-green/50 focus:outline-none transition-colors resize-none"
+                className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-white/40 focus:outline-none transition-colors resize-none"
                 placeholder={lang === "en" ? "Tell me about your project..." : "Erzählen Sie mir von Ihrem Projekt..."}
               />
             </div>
@@ -111,20 +111,20 @@ export default function ContactSection() {
           <div className="grid gap-8 h-fit">
             <div className="grid gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-full bg-android-green/10">
-                  <SvgIcon type="email" className="w-5 h-5" normalColor="#3DDC84" />
+                <div className="p-3 rounded-full bg-white/10">
+                  <SvgIcon type="email" className="w-5 h-5" normalColor="#ffffff" />
                 </div>
                 <div>
                   <p className="text-white/50 text-sm">Email</p>
-                  <a href="mailto:avdheshghevariya01@gmail.com" className="text-white font-medium hover:text-android-green transition-colors">
+                  <a href="mailto:avdheshghevariya01@gmail.com" className="text-white font-medium hover:text-white/70 transition-colors">
                     avdheshghevariya01@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-full bg-android-green/10">
-                  <SvgIcon type="globe" className="w-5 h-5" normalColor="#3DDC84" />
+                <div className="p-3 rounded-full bg-white/10">
+                  <SvgIcon type="globe" className="w-5 h-5" normalColor="#ffffff" />
                 </div>
                 <div>
                   <p className="text-white/50 text-sm">{lang === "en" ? "Location" : "Standort"}</p>
@@ -133,8 +133,8 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-full bg-android-green/10">
-                  <SvgIcon type="github" className="w-5 h-5" normalColor="#3DDC84" />
+                <div className="p-3 rounded-full bg-white/10">
+                  <SvgIcon type="github" className="w-5 h-5" normalColor="#ffffff" />
                 </div>
                 <div>
                   <p className="text-white/50 text-sm">GitHub</p>
@@ -142,7 +142,7 @@ export default function ContactSection() {
                     href="https://github.com/avadhesh1017"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white font-medium hover:text-android-green transition-colors"
+                    className="text-white font-medium hover:text-white/70 transition-colors"
                   >
                     github.com/avadhesh1017
                   </a>
@@ -151,8 +151,8 @@ export default function ContactSection() {
             </div>
 
             {/* Availability badge */}
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-android-green/20 bg-android-green/5">
-              <div className="w-3 h-3 rounded-full bg-android-green animate-pulse" />
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/20 bg-white/5">
+              <div className="w-3 h-3 rounded-full bg-white animate-pulse" />
               <p className="text-white/80 text-sm font-medium">
                 {lang === "en"
                   ? "Available for on-site positions"

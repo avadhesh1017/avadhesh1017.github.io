@@ -227,8 +227,8 @@ export default function ProjectDetailClient() {
               <ul className="grid gap-3">
                 {project.keyFeatures.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="mt-1.5 shrink-0 p-1 rounded-full bg-android-green/15">
-                      <SvgIcon type="tickMark" normalColor="#3DDC84" className="w-2.5 h-2" />
+                    <div className="mt-1.5 shrink-0 p-1 rounded-full bg-white/10">
+                      <SvgIcon type="tickMark" normalColor="#ffffff" className="w-2.5 h-2" />
                     </div>
                     <span className="text-white/70">{feature[lang]}</span>
                   </li>

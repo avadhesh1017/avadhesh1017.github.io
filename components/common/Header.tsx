@@ -98,13 +98,9 @@ export default function Header() {
         }`}
       >
         <div className="container mx-auto sm:px-8 ex-sm:px-6 px-4 flex w-full items-center justify-between py-5">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-              <polyline points="16 18 22 12 16 6" stroke="#3DDC84" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <polyline points="8 6 2 12 8 18" stroke="#3DDC84" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="font-bold text-lg text-white hidden sm:block">AG</span>
+          {/* Logo — "A." */}
+          <Link href="/" className="flex items-center">
+            <span className="font-bold text-2xl text-white tracking-tight">A<span className="text-white/40">.</span></span>
           </Link>
 
           {/* Desktop Nav */}
@@ -117,7 +113,7 @@ export default function Header() {
                   className={`transition-colors ${
                     pathname === tab.href
                       ? "rounded-full bg-white px-4 py-2.5 font-medium text-black"
-                      : "text-white hover:text-android-green"
+                      : "text-white hover:text-white/60"
                   }`}
                 >
                   {tab.name}
@@ -128,7 +124,7 @@ export default function Header() {
             {/* Lang Toggle */}
             <button
               onClick={() => setLang(lang === "en" ? "de" : "en")}
-              className="flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-2 text-sm font-medium text-white/80 transition-all hover:border-android-green hover:text-android-green"
+              className="flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-2 text-sm font-medium text-white/80 transition-all hover:border-white/60 hover:text-white"
             >
               <SvgIcon type="globe" className="w-4 h-4" normalColor="currentColor" />
               {lang === "en" ? "DE" : "EN"}
@@ -161,7 +157,7 @@ export default function Header() {
               key={tab.href}
               href={tab.href}
               onClick={() => setMenuOpen(false)}
-              className="text-2xl font-medium text-white hover:text-android-green transition-colors"
+              className="text-2xl font-medium text-white hover:text-white/60 transition-colors"
             >
               {tab.name}
             </Link>

@@ -11,7 +11,6 @@ import { useLang, t } from "@/lib/i18n";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-/* Project placeholder SVG cards — generated inline since we don't have real screenshots */
 function ProjectPlaceholder({ project }: { project: (typeof PROJECTS)[number] }) {
   return (
     <div
@@ -128,17 +127,17 @@ export default function PortfolioSection() {
         {PROJECTS.map((project, index) => (
           <Link
             href={`/projects/${project.id}`}
-            className="portfolio-card p-4 sm:p-5 bg-card-bg grid group hover:border hover:border-android-green/40 rounded-2xl transition-all duration-300 cursor-pointer shadow-card"
+            className="portfolio-card p-4 sm:p-5 bg-card-bg grid group hover:border hover:border-white/20 rounded-2xl transition-all duration-300 cursor-pointer shadow-card"
             key={index}
           >
             <div className="flex justify-between items-center pb-4 border-b border-white/5 mb-4">
               <div className="flex gap-2 items-baseline">
-                <h3 className="font-medium text-xl sm:text-2xl text-white group-hover:text-android-green transition-colors">
+                <h3 className="font-medium text-xl sm:text-2xl text-white group-hover:text-white/80 transition-colors">
                   {project.title}
                 </h3>
                 <span className="text-xs text-muted-text">• {project.time}</span>
               </div>
-              <div className="py-1.5 px-4 sm:px-5 border border-white/10 rounded-full group-hover:border-android-green/40 group-hover:bg-android-green/10 transition-colors flex items-center justify-center">
+              <div className="py-1.5 px-4 sm:px-5 border border-white/10 rounded-full group-hover:border-white/30 group-hover:bg-white/10 transition-colors flex items-center justify-center">
                 <SvgIcon
                   type="rightArrow"
                   className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"

@@ -45,7 +45,7 @@ export default function Footer() {
               <h4 className="font-medium text-white/50">{t("footer.menu", lang)}</h4>
               <div className="grid gap-2">
                 {menu.map((item, i) => (
-                  <Link key={i} href={item.link} className="font-medium text-white hover:text-android-green transition-colors">
+                  <Link key={i} href={item.link} className="font-medium text-white hover:text-white/60 transition-colors">
                     {item.name}
                   </Link>
                 ))}
@@ -55,7 +55,7 @@ export default function Footer() {
               <h4 className="font-medium text-white/50">{t("footer.legal", lang)}</h4>
               <div className="grid gap-2">
                 {legal.map((item, i) => (
-                  <Link key={i} href={item.link} className="font-medium text-white hover:text-android-green transition-colors">
+                  <Link key={i} href={item.link} className="font-medium text-white hover:text-white/60 transition-colors">
                     {item.name}
                   </Link>
                 ))}
@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-white/10 pt-6 mt-6 text-center text-sm text-white/30">
-          © {new Date().getFullYear()} Avadhesh Ghevariya. All rights reserved.
+          &copy; {new Date().getFullYear()} Avadhesh Ghevariya. All rights reserved.
         </div>
       </div>
     </footer>

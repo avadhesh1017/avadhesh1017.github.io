@@ -7,8 +7,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SvgIcon from "@/components/common/SvgIcon";
 import { OFFER_INFO } from "@/lib/constants";
 import { useLang, t } from "@/lib/i18n";
+import Image from "next/image";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+const OFFER_IMAGES = [
+  "/img/offer-software.png",
+  "/img/offer-systems.png",
+  "/img/offer-mobile.png",
+];
 
 export default function OfferSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -44,7 +51,7 @@ export default function OfferSection() {
       <div className="z-10 pointer-events-none sticky flex justify-center items-center -top-10 h-screen">
         <div className="z-20 h-fit grid gap-10 pointer-events-auto">
           <div className="section-label-wrapper justify-center">
-            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#3DDC84" />
+            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
             <p className="section-label-text">{t("offer.label", lang)}</p>
           </div>
 
@@ -53,7 +60,7 @@ export default function OfferSection() {
               <h3
                 key={offer.title}
                 className={`text-4xl sm:text-5xl md:text-7xl font-semibold transition-all duration-500 ${
-                  activeIndex === index ? "text-android-green" : "text-muted-text"
+                  activeIndex === index ? "text-white" : "text-muted-text"
                 }`}
               >
                 {offer.title}
@@ -64,35 +71,23 @@ export default function OfferSection() {
       </div>
 
       <div className="relative mb-20" style={{ height: `${OFFER_INFO.length * 100}vh` }}>
-        {/* Panels with gradient backgrounds */}
+        {/* Panels with premium images */}
         {OFFER_INFO.map((offer, index) => (
           <div key={offer.title} className="h-screen overflow-hidden">
             <div className="z-0 grid grid-cols-1 md:grid-cols-3">
               <div
-                className={`w-full h-[300px] rounded-2xl mx-4 ${
+                className={`w-full h-[300px] rounded-2xl mx-4 overflow-hidden relative ${
                   index === 1 ? "md:col-start-3" : ""
                 }`}
-                style={{
-                  background: `linear-gradient(135deg, ${
-                    index === 0 ? "#3DDC84" : index === 1 ? "#FF9800" : "#2196F3"
-                  }15, transparent)`,
-                }}
               >
-                <div className="flex items-center justify-center h-full">
-                  {index === 0 ? (
-                    <svg viewBox="0 0 24 24" className="w-24 h-24 opacity-20" fill="none">
-                      <polyline points="16 18 22 12 16 6" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <polyline points="8 6 2 12 8 18" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <line x1="14" y1="4" x2="10" y2="20" stroke="#3DDC84" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                  ) : (
-                    <SvgIcon
-                      type={index === 1 ? "globe" : "github"}
-                      className="w-24 h-24 opacity-20"
-                      normalColor={index === 1 ? "#FF9800" : "#2196F3"}
-                    />
-                  )}
-                </div>
+                <Image
+                  src={OFFER_IMAGES[index]}
+                  alt={offer.title}
+                  fill
+                  unoptimized
+                  className="object-cover opacity-30 hover:opacity-50 transition-opacity duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-dark-bg/80" />
               </div>
             </div>
           </div>

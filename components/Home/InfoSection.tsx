@@ -27,11 +27,11 @@ export default function InfoSection() {
           {INFO.map((info) => (
             <div
               key={info.title.en}
-              className="p-6 bg-darker-bg rounded-2xl border border-white/5 shadow-card hover:border-android-green/30 transition-all duration-300 group"
+              className="p-6 bg-darker-bg rounded-2xl border border-white/5 shadow-card hover:border-white/20 transition-all duration-300 group"
             >
-              <SvgIcon type="yellowMenu" className="w-3 h-3.5" normalColor="#3DDC84" />
+              <SvgIcon type="yellowMenu" className="w-3 h-3.5" normalColor="#ffffff" />
               <div className="mt-16 grid gap-3">
-                <h3 className="text-xl sm:text-2xl font-semibold text-light-heading group-hover:text-android-green transition-colors">
+                <h3 className="text-xl sm:text-2xl font-semibold text-light-heading group-hover:text-white transition-colors">
                   {info.title[lang]}
                 </h3>
                 <p className="font-extralight max-w-[425px] text-white/80 text-xs sm:text-sm leading-relaxed">

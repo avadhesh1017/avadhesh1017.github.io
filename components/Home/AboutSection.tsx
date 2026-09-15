@@ -145,7 +145,7 @@ export default function AboutSection() {
 
           {/* Photo */}
           <div className="w-full lg:w-[320px] shrink-0 about-photo-wrapper will-change-transform">
-            <div className="w-full h-[400px] lg:h-[500px] rounded-[12px] shadow-md overflow-hidden bg-gradient-to-br from-android-green/10 to-transparent flex items-center justify-center relative">
+            <div className="w-full h-[400px] lg:h-[500px] rounded-[12px] shadow-md overflow-hidden bg-gradient-to-br from-black/10 to-transparent flex items-center justify-center relative">
               <Image
                 src="/img/profile.jpg"
                 width={320}

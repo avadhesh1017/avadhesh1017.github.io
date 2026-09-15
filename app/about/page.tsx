@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="section-container pt-10">
         <div className="grid gap-6">
           <div className="section-label-wrapper">
-            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#3DDC84" />
+            <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
             <p className="section-label-text">{t("about.label", lang)}</p>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium text-white">
@@ -48,7 +48,7 @@ export default function AboutPage() {
 
           {/* Photo */}
           <div className="w-full lg:w-[320px] shrink-0">
-            <div className="w-full h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-android-green/10 to-transparent">
+            <div className="w-full h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-white/5 to-transparent">
               <Image
                 src="/img/profile.jpg"
                 width={320}
@@ -74,11 +74,11 @@ export default function AboutPage() {
             {CAREER_TIMELINE.map((item, index) => (
               <div
                 key={index}
-                className="grid gap-2 pl-6 border-l-2 border-android-green/30 hover:border-android-green transition-colors"
+                className="grid gap-2 pl-6 border-l-2 border-white/20 hover:border-white transition-colors"
               >
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
                   <h3 className="font-medium text-xl text-white">{item.role[lang]}</h3>
-                  <span className="text-sm text-android-green font-medium">{item.period}</span>
+                  <span className="text-sm text-white/70 font-medium">{item.period}</span>
                 </div>
                 <p className="text-white/50 text-sm font-medium">{item.company[lang]}</p>
                 <p className="text-white/40 text-sm leading-relaxed">{item.description[lang]}</p>
@@ -96,12 +96,12 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SKILL_CATEGORIES.map((cat, index) => (
-              <div key={index} className="p-6 bg-card-bg rounded-2xl border border-white/5 hover:border-android-green/20 transition-all">
-                <h3 className="font-semibold text-android-green mb-4">{cat.category[lang]}</h3>
+              <div key={index} className="p-6 bg-card-bg rounded-2xl border border-white/5 hover:border-white/20 transition-all">
+                <h3 className="font-semibold text-white mb-4">{cat.category[lang]}</h3>
                 <ul className="grid gap-2.5">
                   {cat.skills.map((skill, i) => (
                     <li key={i} className="flex items-center gap-2.5 text-sm text-white/70">
-                      <div className="w-1.5 h-1.5 rounded-full bg-android-green/50" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
                       {skill}
                     </li>
                   ))}
@@ -120,7 +120,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {SPOKEN_LANGUAGES.map((language, i) => (
-              <div key={i} className="p-4 bg-card-bg rounded-xl border border-white/5 text-center hover:border-android-green/20 transition-all">
+              <div key={i} className="p-4 bg-card-bg rounded-xl border border-white/5 text-center hover:border-white/20 transition-all">
                 <p className="text-white font-medium">{language.name[lang]}</p>
                 <p className="text-white/40 text-sm mt-1">{language.level[lang]}</p>
               </div>

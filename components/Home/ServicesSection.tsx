@@ -21,7 +21,7 @@ export default function ServicesSection() {
       if (!sectionRef.current) return;
 
       gsap.from(".service-header-item", {
-        scrollTrigger: { trigger: ".service-header-wrapper", start: "top 85%", toggleActions: "play none none reverse" },
+        scrollTrigger: { trigger: ".service-header-wrapper", start: "top 85%", toggleActions: "play none none none" },
         y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out",
       });
 
@@ -29,12 +29,17 @@ export default function ServicesSection() {
       cards.forEach((card, i) => {
         const details = card.querySelector(".service-details");
 
+        gsap.set(card, { opacity: 1 });
+        if (details) gsap.set(details, { opacity: 1 });
+
         const tl = gsap.timeline({
-          scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none reverse" },
+          scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" },
         });
 
-        tl.from(card, { y: 60, opacity: 0, duration: 0.6, ease: "power3.out" }, 0)
-          .from(details, { x: i % 2 === 0 ? 40 : -40, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
+        tl.from(card, { y: 60, opacity: 0, duration: 0.6, ease: "power3.out" }, 0);
+        if (details) {
+          tl.from(details, { x: i % 2 === 0 ? 40 : -40, opacity: 0, duration: 0.8, ease: "power3.out" }, 0.2);
+        }
       });
     },
     { scope: sectionRef }
@@ -44,7 +49,7 @@ export default function ServicesSection() {
     <section className="section-container" ref={sectionRef}>
       <div className="grid gap-10 service-header-wrapper">
         <div className="section-label-wrapper service-header-item">
-          <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#3DDC84" />
+          <SvgIcon type="grayStar" className="w-[18px] h-[18px]" normalColor="#ffffff" />
           <p className="section-label-text">{t("services.label", lang)}</p>
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-[64px] text-light-heading max-w-[855px] service-header-item leading-tight">
@@ -59,23 +64,21 @@ export default function ServicesSection() {
         {SERVICES.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col lg:flex-row gap-6 lg:gap-0 service-card bg-card-bg border border-white/5 rounded-3xl overflow-hidden shadow-card hover:border-android-green/20 transition-all ${
+            className={`flex flex-col lg:flex-row gap-6 lg:gap-0 service-card bg-card-bg border border-white/5 rounded-3xl overflow-hidden shadow-card hover:border-white/20 transition-all ${
               index % 2 !== 0 ? "lg:flex-row-reverse" : ""
             }`}
           >
             {/* App screenshot with tech background */}
-            <div className="w-full lg:min-w-[51%] relative min-h-[300px] lg:min-h-[440px] bg-gradient-to-br from-[#0a1a0a] to-black flex items-center justify-center overflow-hidden">
-              {/* Decorative tech accent behind the phone */}
+            <div className="w-full lg:min-w-[51%] relative min-h-[300px] lg:min-h-[440px] bg-gradient-to-br from-[#111] to-black flex items-center justify-center overflow-hidden">
               <Image
                 src="/img/tech-accent.png"
                 alt=""
                 fill
                 unoptimized
-                className="object-cover opacity-20"
+                className="object-cover opacity-15"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
-              {/* Phone screenshot */}
-              <div className="relative z-10 w-[180px] sm:w-[200px] lg:w-[220px] rounded-2xl overflow-hidden shadow-2xl shadow-android-green/10 border border-white/10">
+              <div className="relative z-10 w-[180px] sm:w-[200px] lg:w-[220px] rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10">
                 <Image
                   src={item.img}
                   width={220}
@@ -96,8 +99,8 @@ export default function ServicesSection() {
                 <ul className="grid gap-3 h-fit">
                   {item.features[lang].map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <div className="mt-1 shrink-0 p-1 rounded-full bg-android-green/15">
-                        <SvgIcon type="tickMark" normalColor="#3DDC84" className="w-2.5 h-2" />
+                      <div className="mt-1 shrink-0 p-1 rounded-full bg-white/10">
+                        <SvgIcon type="tickMark" normalColor="#ffffff" className="w-2.5 h-2" />
                       </div>
                       <span className="text-soft-text text-xs sm:text-sm">{feature}</span>
                     </li>
