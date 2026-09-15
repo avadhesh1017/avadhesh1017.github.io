@@ -7,7 +7,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLang, t } from "@/lib/i18n";
-import BackgroundStrip from "./BackgroundStrip";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -118,8 +117,12 @@ export default function HeroSection() {
 
   return (
     <section id="home-hero" ref={sectionRef} className="relative h-[300vh]">
-      <div className="sticky top-0 h-screen overflow-hidden">
-        <BackgroundStrip />
+      <div className="sticky top-0 h-screen overflow-hidden bg-black">
+        {/* Ambient glow that shows when hero scales down */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-white/[0.03] blur-[120px] animate-pulse" />
+          <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-white/[0.02] blur-[80px]" style={{ animation: "pulse 4s ease-in-out infinite alternate" }} />
+        </div>
 
         <div ref={heroRef} className="will-change-transform">
           <div className="relative h-screen overflow-hidden bg-black">
@@ -129,28 +132,18 @@ export default function HeroSection() {
               fill
               priority
               unoptimized
-              className="hero-bg-img object-cover object-center opacity-40"
+              className="hero-bg-img object-cover object-center opacity-50"
               sizes="100vw"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
-
-            {/* Subtle noise texture */}
-            <div
-              className="absolute inset-0 opacity-[0.02] pointer-events-none"
-              style={{
-                backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.08) 2px, rgba(255,255,255,0.08) 4px)`,
-              }}
-            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
 
             <div className="relative z-10 mx-auto flex h-screen flex-col justify-between px-6 container">
-              {/* Top — Minimal logo */}
               <div className="flex w-full items-center justify-center gap-2 pt-8">
                 <span className="font-bold text-2xl text-white/80 tracking-tight">A<span className="text-white/30">.</span></span>
               </div>
 
-              {/* Center — Big name */}
               <div className="flex flex-col items-center gap-4">
                 <h1 className="hero-name text-center font-bold text-white text-5xl mg-sm:text-6xl sm:text-8xl md:text-[140px] lg:text-[200px] leading-none tracking-tight drop-shadow-[0_0_80px_rgba(255,255,255,0.08)]">
                   AVADHESH
@@ -160,7 +153,6 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              {/* Bottom — CTA + info */}
               <div className="flex flex-col items-center md:flex-row md:items-end justify-between gap-4 sm:gap-6 md:gap-0 pb-6">
                 <Link href="/contact" className="hero-bottom-item btn-green w-full md:w-auto text-center">
                   {t("hero.cta", lang)}
