@@ -96,7 +96,7 @@ export default function OfferSection() {
       </div>
 
       {/* Scroll spacer — drives the scroll progress */}
-      <div style={{ height: `${OFFER_INFO.length * 100}vh` }} />
+      <div style={{ height: `${OFFER_INFO.length * 50}vh` }} />
     </section>
   );
 }

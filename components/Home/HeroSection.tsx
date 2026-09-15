@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLang, t } from "@/lib/i18n";
+import BackgroundStrip from "./BackgroundStrip";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -118,13 +119,7 @@ export default function HeroSection() {
   return (
     <section id="home-hero" ref={sectionRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
-        {/* Subtle vertical lines */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-[10%] w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />
-          <div className="absolute top-0 left-[30%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="absolute top-0 left-[60%] w-px h-full bg-gradient-to-b from-transparent via-white/8 to-transparent" />
-          <div className="absolute top-0 left-[85%] w-px h-full bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-        </div>
+        <BackgroundStrip />
 
         <div ref={heroRef} className="will-change-transform">
           <div className="relative h-screen overflow-hidden bg-black">
