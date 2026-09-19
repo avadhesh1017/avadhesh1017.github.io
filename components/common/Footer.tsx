@@ -35,7 +35,7 @@ export default function Footer() {
               <span className="text-white/50">{t("footer.professional", lang)}</span>
             </h3>
             <Link href="/contact" className="btn-ghost w-fit">
-              {t("services.getInTouch", lang)}
+              {t("footer.getInTouch", lang)}
               <SvgIcon type="rightArrow" className="w-4 h-4" normalColor="white" />
             </Link>
           </div>
@@ -62,6 +62,14 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex gap-3 h-fit">
+              <a
+                href="https://www.linkedin.com/in/avadhesh-ghevariya-a9b108371"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon-light"
+              >
+                <SvgIcon type="linkedin" className="w-4 h-4" normalColor="#FFFFFF" />
+              </a>
               <a
                 href="https://github.com/avadhesh1017"
                 target="_blank"

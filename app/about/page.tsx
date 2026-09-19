@@ -27,16 +27,21 @@ export default function AboutPage() {
       <section className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10">
           <div className="grid gap-8">
-            <h2 className="font-medium text-dim-text text-xl sm:text-2xl md:text-3xl">
-              <span className="text-white">Avadhesh Ghevariya</span>
-              {t("about.bio", lang)}
+            <h2 className="font-medium text-white text-xl sm:text-2xl md:text-3xl">
+              Avadhesh Ghevariya
             </h2>
+            <p className="text-white/60 text-base sm:text-lg leading-relaxed max-w-[600px]">
+              {t("about.bio", lang)}
+            </p>
             <p className="text-white/60 max-w-[600px] leading-relaxed">
               {t("about.locationText", lang)}
             </p>
 
             {/* Social links */}
             <div className="flex gap-3">
+              <a href="https://www.linkedin.com/in/avadhesh-ghevariya-a9b108371" target="_blank" rel="noopener noreferrer" className="social-icon-light">
+                <SvgIcon type="linkedin" className="w-5 h-5" normalColor="#FFFFFF" />
+              </a>
               <a href="https://github.com/avadhesh1017" target="_blank" rel="noopener noreferrer" className="social-icon-light">
                 <SvgIcon type="github" className="w-5 h-5" normalColor="#FFFFFF" />
               </a>

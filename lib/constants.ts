@@ -65,28 +65,28 @@ export const PROJECTS: Project[] = [
       "/img/taskflow-status.jpg",
     ],
     description: {
-      en: "A full-featured task management app with Firebase Auth, Firestore real-time sync, calendar integration, analytics dashboard, and push notifications — built with MVVM architecture.",
-      de: "Eine voll ausgestattete Task-Management-App mit Firebase Auth, Firestore Echtzeit-Synchronisation, Kalenderintegration, Analytics-Dashboard und Push-Benachrichtigungen — erstellt mit MVVM-Architektur.",
+      en: "A full-featured task management app built with MVVM architecture and a Repository pattern. Users authenticate via email/password or Google Sign-In through Firebase Auth, and all tasks sync in real time across devices using Cloud Firestore. Tasks can be organized by color-coded categories with three priority levels (High, Medium, Low), and the calendar view shows dot indicators on days with pending tasks. An analytics dashboard displays completion rates, category distribution via pie charts, and weekly progress in bar graphs — powered by MPAndroidChart. Firebase Cloud Messaging delivers push notifications for due-date reminders. The app supports bilingual EN/DE and is built with Java 17 and Material Design 3.",
+      de: "Eine voll ausgestattete Aufgabenverwaltungs-App mit MVVM-Architektur und Repository-Pattern. Benutzer authentifizieren sich per E-Mail/Passwort oder Google Sign-In über Firebase Auth, und alle Aufgaben synchronisieren sich in Echtzeit über Cloud Firestore auf allen Geräten. Aufgaben können nach farbcodierten Kategorien mit drei Prioritätsstufen (Hoch, Mittel, Niedrig) organisiert werden, und die Kalenderansicht zeigt Punktindikatoren an Tagen mit offenen Aufgaben. Ein Analytics-Dashboard zeigt Abschlussraten, Kategorieverteilung als Kreisdiagramme und wöchentlichen Fortschritt als Balkendiagramme — mit MPAndroidChart. Firebase Cloud Messaging liefert Push-Benachrichtigungen für Fälligkeitserinnerungen. Die App unterstützt zweisprachig EN/DE und ist mit Java 17 und Material Design 3 erstellt.",
     },
-    technologies: ["Java", "Firebase Auth", "Cloud Firestore", "FCM", "Material Design 3", "MPAndroidChart", "MVVM"],
+    technologies: ["Java 17", "Firebase Auth", "Cloud Firestore", "FCM", "Material Design 3", "MPAndroidChart", "MVVM"],
     featured: true,
     accentColor: "#4CAF50",
     keyFeatures: [
       {
-        en: "Email/password & Google Sign-In authentication",
-        de: "E-Mail/Passwort & Google Sign-In Authentifizierung",
+        en: "Email/password & Google Sign-In with real-time Firestore sync across devices",
+        de: "E-Mail/Passwort & Google Sign-In mit Echtzeit-Firestore-Synchronisation über Geräte",
       },
       {
-        en: "Color-coded categories with priority levels",
-        de: "Farbcodierte Kategorien mit Prioritätsstufen",
+        en: "Color-coded categories with three priority levels and due-date reminders via FCM",
+        de: "Farbcodierte Kategorien mit drei Prioritätsstufen und Fälligkeitserinnerungen via FCM",
       },
       {
-        en: "Calendar month view with task day indicators",
-        de: "Kalender-Monatsansicht mit Aufgaben-Tagesindikatoren",
+        en: "Calendar month view with dot indicators on days that have pending tasks",
+        de: "Kalender-Monatsansicht mit Punktindikatoren an Tagen mit offenen Aufgaben",
       },
       {
-        en: "Analytics: completion rates, category pie charts, weekly bar graphs",
-        de: "Analysen: Abschlussraten, Kategorie-Kreisdiagramme, Wochen-Balkendiagramme",
+        en: "Analytics dashboard: completion rates, category pie charts, weekly bar graphs",
+        de: "Analytics-Dashboard: Abschlussraten, Kategorie-Kreisdiagramme, Wochen-Balkendiagramme",
       },
     ],
     github: "https://github.com/avadhesh1017/TaskFlow",
@@ -113,24 +113,24 @@ export const PROJECTS: Project[] = [
       "/img/notyourmoney-8.jpg",
     ],
     description: {
-      en: "An offline-first expense tracking app with Room database, budget management, borrow/debt tracking, recurring transactions via WorkManager, and rich analytics with CSV/PDF export — bilingual EN/DE.",
-      de: "Eine Offline-First Ausgaben-Tracking-App mit Room-Datenbank, Budgetverwaltung, Schulden-Tracking, wiederkehrende Transaktionen via WorkManager und umfangreiche Analysen mit CSV/PDF-Export — zweisprachig EN/DE.",
+      en: "An offline-first personal finance app that stores all data locally in Room (SQLite) so it works without internet — Firebase Auth is used only for identity, not data storage. Features a custom numeric keypad for quick expense entry by category, monthly budgets with per-category progress bars, and a borrow/debt tracker that groups transactions by person with net-balance calculations. Recurring transactions are automated through WorkManager. Analytics offer 7-day, 6-week, and 6-month comparisons with exportable CSV and PDF reports. The bottom navigation uses a custom 6-tab layout (Material Design caps at 5). Bilingual EN/DE throughout, built with MVVM and LiveData.",
+      de: "Eine Offline-First-Finanz-App, die alle Daten lokal in Room (SQLite) speichert und ohne Internet funktioniert — Firebase Auth wird nur für die Identität verwendet, nicht für Datenspeicherung. Mit benutzerdefiniertem Nummernpad für schnelle Kategorieausgaben, monatlichen Budgets mit Fortschrittsbalken pro Kategorie und einem Schulden-Tracker, der Transaktionen pro Person mit Nettosaldo-Berechnungen gruppiert. Wiederkehrende Transaktionen werden über WorkManager automatisiert. Analysen bieten 7-Tage-, 6-Wochen- und 6-Monats-Vergleiche mit exportierbaren CSV- und PDF-Berichten. Die Bottom-Navigation nutzt ein eigenes 6-Tab-Layout (Material Design begrenzt auf 5). Zweisprachig EN/DE, erstellt mit MVVM und LiveData.",
     },
     technologies: ["Java", "Room DB", "Firebase Auth", "WorkManager", "MPAndroidChart", "MVVM", "LiveData"],
     featured: true,
     accentColor: "#5980A6",
     keyFeatures: [
       {
-        en: "Custom numeric keypad with category-based expense entry",
-        de: "Benutzerdefiniertes Nummernpad mit kategoriebasierter Ausgabeneingabe",
+        en: "Offline-first: all data in Room DB — Firebase Auth only for identity, not storage",
+        de: "Offline-First: alle Daten in Room DB — Firebase Auth nur für Identität, nicht Speicherung",
       },
       {
-        en: "Monthly budgets with visual progress indicators per category",
-        de: "Monatliche Budgets mit visuellen Fortschrittsanzeigen pro Kategorie",
+        en: "Custom numeric keypad and monthly budgets with per-category progress bars",
+        de: "Benutzerdefiniertes Nummernpad und Monatsbudgets mit Fortschrittsbalken pro Kategorie",
       },
       {
-        en: "Borrow/debt tracker with net balance calculations per person",
-        de: "Schulden-Tracker mit Nettosaldo-Berechnungen pro Person",
+        en: "Borrow/debt tracker grouped by person with net-balance calculations",
+        de: "Schulden-Tracker gruppiert nach Person mit Nettosaldo-Berechnungen",
       },
       {
         en: "CSV & PDF export with 7-day, 6-week, 6-month chart comparisons",
@@ -140,38 +140,46 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/avadhesh1017/NotYourMoney",
   },
   {
-    id: "praxis-app",
-    title: "Praxis App",
+    id: "quick-care",
+    title: "Quick Care",
     subtitle: {
-      en: "Local Clinic Companion — Appointments & Announcements",
-      de: "Lokale Praxis-App — Termine & Ankündigungen",
+      en: "Medical Appointment Booking App for Patients & Doctors",
+      de: "Medizinische Terminbuchungs-App für Patienten & Ärzte",
     },
     category: { en: "Android App", de: "Android-App" },
     time: "2024",
-    img: "/img/praxisapp.svg",
+    img: "/img/quickcare/quickcare-p53-5.jpg",
+    screenshots: [
+      "/img/quickcare/quickcare-p53-5.jpg",
+      "/img/quickcare/quickcare-p52-3.jpg",
+      "/img/quickcare/quickcare-p60-14.jpg",
+      "/img/quickcare/quickcare-p56-9.jpg",
+      "/img/quickcare/quickcare-p66-20.jpg",
+      "/img/quickcare/quickcare-p62-16.jpg",
+    ],
     description: {
-      en: "A compact clinic companion app for local practices — appointment slot booking, holiday/closure announcements, emergency call quick-dial, and doctor profile information.",
-      de: "Eine kompakte Praxis-Begleit-App für lokale Praxen — Termin-Slot-Buchung, Feiertags-/Schließungsankündigungen, Notfall-Schnellwahl und Arzt-Profilinformationen.",
+      en: "A dual-role medical appointment booking system with separate interfaces for patients and doctors. Patients can register, browse available doctors, book appointment slots, view their appointment turn in real time, access best medical references and labs, and read doctor announcements. Doctors can manage their appointment slots (open/close booking windows), accept or reject appointment requests, view their daily schedule, and post announcements for patients. The backend is built with PHP and MySQL, providing a REST API that the Android client communicates with for authentication, scheduling, and data management.",
+      de: "Ein duales medizinisches Terminbuchungssystem mit separaten Oberflächen für Patienten und Ärzte. Patienten können sich registrieren, verfügbare Ärzte durchsuchen, Terminslots buchen, ihre Terminnummer in Echtzeit sehen, beste medizinische Referenzen und Labore einsehen und Arzt-Ankündigungen lesen. Ärzte können ihre Terminslots verwalten (Buchungsfenster öffnen/schließen), Terminanfragen annehmen oder ablehnen, ihren Tagesplan einsehen und Ankündigungen für Patienten veröffentlichen. Das Backend ist mit PHP und MySQL gebaut und stellt eine REST-API bereit, über die der Android-Client für Authentifizierung, Terminplanung und Datenverwaltung kommuniziert.",
     },
-    technologies: ["Java", "Android Studio", "XML", "SQLite", "Firebase"],
+    technologies: ["Java", "Android Studio", "XML", "PHP", "MySQL", "REST API", "Firebase"],
     featured: true,
     accentColor: "#E53935",
     keyFeatures: [
       {
-        en: "Appointment slot booking with time-slot selection",
-        de: "Terminbuchung mit Zeitslot-Auswahl",
+        en: "Dual-role system: separate patient and doctor interfaces with role-based access",
+        de: "Dual-Rollen-System: separate Patienten- und Arzt-Oberflächen mit rollenbasiertem Zugriff",
       },
       {
-        en: "Push notifications for practice announcements & closures",
-        de: "Push-Benachrichtigungen für Praxis-Ankündigungen & Schließungen",
+        en: "Real-time appointment queue — patients can see their current turn number",
+        de: "Echtzeit-Warteschlange — Patienten können ihre aktuelle Nummer sehen",
       },
       {
-        en: "One-tap emergency call with doctor contact info",
-        de: "Ein-Tipp-Notfallanruf mit Arzt-Kontaktinformationen",
+        en: "Doctors manage booking slots, accept/reject requests, and post announcements",
+        de: "Ärzte verwalten Buchungsslots, nehmen Anfragen an/lehnen ab und veröffentlichen Ankündigungen",
       },
       {
-        en: "Doctor profile with basic practice information",
-        de: "Arztprofil mit grundlegenden Praxisinformationen",
+        en: "PHP + MySQL backend with REST API for authentication and scheduling",
+        de: "PHP + MySQL-Backend mit REST-API für Authentifizierung und Terminplanung",
       },
     ],
   },
@@ -186,28 +194,28 @@ export const PROJECTS: Project[] = [
     time: "2025",
     img: "/img/tradejournal-placeholder.svg",
     description: {
-      en: "A native Android trading journal that replaces manual screenshot workflows — one-tap S Pen screen capture with pressure-sensitive annotation overlay, organized journal management with P/L tagging, and PDF export.",
-      de: "Ein natives Android-Handelsjournal, das manuelle Screenshot-Workflows ersetzt — Ein-Tipp S Pen Bildschirmaufnahme mit druckempfindlichem Annotations-Overlay, organisierte Journalverwaltung mit G/V-Tagging und PDF-Export.",
+      en: "A native Android trading journal designed for Samsung tablets with S Pen. It replaces the manual screenshot → gallery → notepad workflow with a single-tap capture tool. The app registers as an S Pen Air Command shortcut — when triggered, a floating capture button appears over any app. Tapping it captures the screen via MediaProjection API, then opens a full-screen annotation overlay where users can draw and write with pressure-sensitive S Pen input on a custom Canvas-based View. Annotated trades are saved into organized journals with Profit/Loss/Break-Even tags, dates, and notes. The entire flow feels like a system tool rather than an app — the annotation overlay floats on top of everything, similar to Samsung's own Screen Write. Uses Room database for local storage and iText 7 for PDF export with auto-numbered pages.",
+      de: "Ein natives Android-Handelsjournal für Samsung-Tablets mit S Pen. Es ersetzt den manuellen Screenshot → Galerie → Notizblock-Workflow durch ein Ein-Tipp-Aufnahmetool. Die App registriert sich als S Pen Air Command Shortcut — beim Auslösen erscheint ein schwebendes Aufnahme-Button über jeder App. Ein Tippen erfasst den Bildschirm via MediaProjection API und öffnet ein Vollbild-Annotations-Overlay, in dem Benutzer mit druckempfindlichem S Pen auf einer benutzerdefinierten Canvas-View zeichnen und schreiben können. Annotierte Trades werden in organisierte Journale mit Gewinn/Verlust/Break-Even-Tags, Daten und Notizen gespeichert. Der gesamte Ablauf fühlt sich wie ein Systemtool an — das Annotations-Overlay schwebt über allem, ähnlich wie Samsungs eigene Screen Write Funktion. Nutzt Room-Datenbank für lokale Speicherung und iText 7 für PDF-Export mit automatisch nummerierten Seiten.",
     },
     technologies: ["Kotlin", "Room DB", "MediaProjection", "Material Design 3", "Coroutines", "Custom Canvas", "iText PDF"],
     featured: true,
     accentColor: "#FFB300",
     keyFeatures: [
       {
-        en: "S Pen Air Command integration for one-tap capture",
-        de: "S Pen Air Command Integration für Ein-Tipp-Aufnahme",
+        en: "S Pen Air Command shortcut — floating capture button over any app, no switching needed",
+        de: "S Pen Air Command Shortcut — schwebendes Aufnahme-Button über jeder App, kein Wechsel nötig",
       },
       {
-        en: "Floating overlay with pressure-sensitive drawing",
-        de: "Schwebendes Overlay mit druckempfindlichem Zeichnen",
+        en: "Pressure-sensitive annotation overlay using a custom Canvas-based View with S Pen support",
+        de: "Druckempfindliches Annotations-Overlay mit benutzerdefinierter Canvas-View und S Pen Unterstützung",
       },
       {
-        en: "Organized journals with Profit/Loss/Break-Even tagging",
-        de: "Organisierte Journale mit Gewinn/Verlust/Break-Even-Tagging",
+        en: "Organized journals with Profit/Loss/Break-Even tags, thumbnails, and dates",
+        de: "Organisierte Journale mit Gewinn/Verlust/Break-Even-Tags, Vorschaubildern und Daten",
       },
       {
-        en: "PDF export with auto-numbered trade pages",
-        de: "PDF-Export mit automatisch nummerierten Handelsseiten",
+        en: "PDF export via iText 7 with auto-numbered trade pages per journal",
+        de: "PDF-Export via iText 7 mit automatisch nummerierten Handelsseiten pro Journal",
       },
     ],
     github: "https://github.com/avadhesh1017/TradeJournal",
@@ -227,28 +235,28 @@ export const PROJECTS: Project[] = [
       "/img/mangalens-screenshot-2.jpg",
     ],
     description: {
-      en: "A real-time screen translation overlay — captures manga pages, runs on-device OCR with ML Kit, and overlays DeepL-powered translations directly onto speech bubbles. Supports tap-to-translate and full-page modes with 13+ source languages.",
-      de: "Ein Echtzeit-Bildschirm-Übersetzungs-Overlay — erfasst Manga-Seiten, führt On-Device-OCR mit ML Kit durch und blendet DeepL-gestützte Übersetzungen direkt auf Sprechblasen ein. Unterstützt Tipp-zum-Übersetzen und Ganzseitenmodus mit 13+ Quellsprachen.",
+      en: "A real-time screen translation overlay for reading manga in any language. A floating trigger bubble sits over any app — tap it to capture the screen via MediaProjection, then choose between tap-to-translate mode (tap individual words or speech bubbles) or full-page mode (translates all detected text at once). Text is extracted on-device using Google ML Kit OCR with no internet needed for detection, then sent to the DeepL API for translation into the user's language. A translation cache stores previous results to save API calls and deliver instant results on repeated pages. Includes text-to-speech playback, supports 13+ source languages, and integrates with Samsung Edge Panel for quick access. Built with Kotlin, Coroutines, and Material Design 3.",
+      de: "Ein Echtzeit-Bildschirm-Übersetzungs-Overlay zum Lesen von Manga in jeder Sprache. Eine schwebende Trigger-Blase sitzt über jeder App — antippen, um den Bildschirm via MediaProjection zu erfassen, dann zwischen Tipp-zum-Übersetzen-Modus (einzelne Wörter oder Sprechblasen antippen) oder Ganzseitenmodus (übersetzt allen erkannten Text auf einmal) wählen. Text wird on-device mit Google ML Kit OCR extrahiert, ohne Internet für die Erkennung, und dann an die DeepL API zur Übersetzung gesendet. Ein Übersetzungs-Cache speichert vorherige Ergebnisse, um API-Aufrufe zu sparen und sofortige Ergebnisse bei wiederholten Seiten zu liefern. Enthält Text-to-Speech-Wiedergabe, unterstützt 13+ Quellsprachen und integriert sich mit Samsung Edge Panel für schnellen Zugriff. Erstellt mit Kotlin, Coroutines und Material Design 3.",
     },
     technologies: ["Kotlin", "ML Kit OCR", "DeepL API", "MediaProjection", "Material Design 3", "Coroutines", "TTS"],
     featured: true,
     accentColor: "#7C4DFF",
     keyFeatures: [
       {
-        en: "Floating trigger bubble — translate any app without switching",
-        de: "Schwebende Trigger-Blase — jede App übersetzen ohne Wechsel",
+        en: "Floating trigger bubble — translate any app without switching, with Samsung Edge Panel support",
+        de: "Schwebende Trigger-Blase — jede App übersetzen ohne Wechsel, mit Samsung Edge Panel Unterstützung",
       },
       {
-        en: "On-device OCR with Google ML Kit (no internet needed for detection)",
-        de: "On-Device OCR mit Google ML Kit (kein Internet für Erkennung nötig)",
+        en: "On-device OCR via Google ML Kit — no internet needed for text detection",
+        de: "On-Device OCR via Google ML Kit — kein Internet für Texterkennung nötig",
       },
       {
-        en: "Tap-to-translate words or full-page overlay translation",
-        de: "Tipp-zum-Übersetzen von Wörtern oder Ganzseitenüberlagerung",
+        en: "Two modes: tap-to-translate individual words or full-page overlay translation",
+        de: "Zwei Modi: Tipp-zum-Übersetzen einzelner Wörter oder Ganzseitenüberlagerung",
       },
       {
-        en: "Translation cache to save API calls and show instant results",
-        de: "Übersetzungs-Cache zum Sparen von API-Aufrufen und sofortige Ergebnisse",
+        en: "Translation cache for instant results + text-to-speech playback in 13+ languages",
+        de: "Übersetzungs-Cache für sofortige Ergebnisse + Text-to-Speech-Wiedergabe in 13+ Sprachen",
       },
     ],
     github: "https://github.com/avadhesh1017/MangaLens",
@@ -262,8 +270,8 @@ export const OFFER_INFO = [
   {
     title: "SOFTWARE",
     description: {
-      en: "Building production-quality applications with Java, Python, and modern frameworks — engineered for performance, scalability, and maintainability.",
-      de: "Entwicklung produktionsreifer Anwendungen mit Java, Python und modernen Frameworks — entwickelt für Performance, Skalierbarkeit und Wartbarkeit.",
+      en: "Building applications with Java, Python, and modern frameworks — focused on clean code, performance, and maintainability.",
+      de: "Entwicklung von Anwendungen mit Java, Python und modernen Frameworks — mit Fokus auf sauberen Code, Performance und Wartbarkeit.",
     },
   },
   {
@@ -328,7 +336,7 @@ export const CAREER_TIMELINE = [
   {
     period: "2025 – Present",
     role: { en: "M.Sc. Autonomous Driving", de: "M.Sc. Autonomous Driving" },
-    company: { en: "University in Germany", de: "Universität in Deutschland" },
+    company: { en: "Hochschule Hof, Germany", de: "Hochschule Hof, Deutschland" },
     description: {
       en: "Studying radar signal processing, sensor fusion, real-time systems, and vehicle perception — bridging software engineering with automotive intelligence.",
       de: "Studium von Radarsignalverarbeitung, Sensorfusion, Echtzeitsystemen und Fahrzeugwahrnehmung — Verbindung von Softwareentwicklung mit automobiler Intelligenz.",
@@ -336,11 +344,11 @@ export const CAREER_TIMELINE = [
   },
   {
     period: "2024 – 2025",
-    role: { en: "Software Developer", de: "Softwareentwickler" },
-    company: { en: "Professional Projects", de: "Berufliche Projekte" },
+    role: { en: "Android Developer", de: "Android-Entwickler" },
+    company: { en: "S2soft Infotech LLP", de: "S2soft Infotech LLP" },
     description: {
-      en: "Built and shipped multiple production applications — mobile apps with Firebase backends, offline-first databases, and real-time sync. Hands-on experience across the full development lifecycle.",
-      de: "Entwicklung und Veröffentlichung mehrerer Produktionsanwendungen — mobile Apps mit Firebase-Backends, Offline-First-Datenbanken und Echtzeit-Synchronisation. Praxiserfahrung über den gesamten Entwicklungszyklus.",
+      en: "Developed Android applications using Java, Android Studio, XML, and Firebase. Worked on clinic companion apps, task management tools, and expense tracking systems.",
+      de: "Entwicklung von Android-Anwendungen mit Java, Android Studio, XML und Firebase. Arbeit an Praxis-Begleit-Apps, Aufgabenmanagement-Tools und Ausgabenverfolgungs-Systemen.",
     },
   },
   {
@@ -359,40 +367,42 @@ export const CAREER_TIMELINE = [
    ──────────────────────────────────────────── */
 export const SERVICES = [
   {
-    projectType: { en: "Application Development", de: "Anwendungsentwicklung" },
+    projectType: { en: "Mobile Applications", de: "Mobile Anwendungen" },
     features: {
       en: [
-        "Native Android with Java, Kotlin & Material Design",
+        "Native Android with Java, Kotlin & Material Design 3",
         "Backend integration with Firebase, REST APIs & databases",
         "Clean architecture (MVVM) with offline-first design",
-        "End-to-end delivery from concept to deployment",
+        "Real-time sync, push notifications & analytics dashboards",
       ],
       de: [
-        "Natives Android mit Java, Kotlin & Material Design",
+        "Natives Android mit Java, Kotlin & Material Design 3",
         "Backend-Integration mit Firebase, REST APIs & Datenbanken",
         "Saubere Architektur (MVVM) mit Offline-First Design",
-        "End-to-End-Lieferung vom Konzept bis zum Deployment",
+        "Echtzeit-Synchronisation, Push-Benachrichtigungen & Analytics-Dashboards",
       ],
     },
     img: "/img/taskflow-screenshot.jpg",
+    github: "https://github.com/avadhesh1017/TaskFlow",
   },
   {
-    projectType: { en: "Software Engineering & Systems", de: "Software Engineering & Systeme" },
+    projectType: { en: "Software & Systems Engineering", de: "Software- & Systemtechnik" },
     features: {
       en: [
         "Data processing pipelines in Python & C++",
         "Sensor data analysis & real-time signal processing",
-        "Version control, CI/CD, and documentation",
-        "UI/UX prototyping with Figma",
+        "OCR-based translation with ML Kit & DeepL",
+        "Version control, documentation & testing",
       ],
       de: [
         "Datenverarbeitungs-Pipelines in Python & C++",
         "Sensordatenanalyse & Echtzeit-Signalverarbeitung",
-        "Versionskontrolle, CI/CD und Dokumentation",
-        "UI/UX-Prototyping mit Figma",
+        "OCR-basierte Übersetzung mit ML Kit & DeepL",
+        "Versionskontrolle, Dokumentation & Testing",
       ],
     },
     img: "/img/notyourmoney-screenshot.jpg",
+    github: "https://github.com/avadhesh1017/NotYourMoney",
   },
 ] as const;
 

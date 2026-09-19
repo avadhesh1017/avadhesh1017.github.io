@@ -10,7 +10,7 @@ import { useLang, t } from "@/lib/i18n";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const TAGS = ["// Software", "// Systems", "// Architecture"];
+const TAGS = ["// Software", "// Mobile", "// Systems"];
 
 const STATS = [
   { title: { en: "Projects Built", de: "Projekte entwickelt" }, value: "5+" },
@@ -95,11 +95,18 @@ export default function AboutSection() {
           <div className="flex flex-col w-[stretch] h-fit gap-8">
             {/* Bio + socials */}
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 justify-between">
-              <h3 className="font-medium text-dim-text text-xl sm:text-2xl md:text-[28px] max-w-[482px] about-bio-item">
-                <span className="text-black">Avadhesh Ghevariya</span>
+              <h3 className="font-medium text-dim-text text-base sm:text-lg md:text-xl max-w-[540px] leading-relaxed about-bio-item">
                 {t("about.bio", lang)}
               </h3>
               <div className="flex gap-3 h-fit about-bio-item">
+                <a
+                  href="https://www.linkedin.com/in/avadhesh-ghevariya-a9b108371"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon-dark"
+                >
+                  <SvgIcon type="linkedin" className="w-4 h-4" normalColor="#000000" />
+                </a>
                 <a
                   href="https://github.com/avadhesh1017"
                   target="_blank"

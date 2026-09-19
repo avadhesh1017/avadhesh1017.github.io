@@ -95,7 +95,7 @@ export default function ContactSection() {
                 required
                 rows={5}
                 className="bg-card-bg border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/30 focus:border-white/40 focus:outline-none transition-colors resize-none"
-                placeholder={lang === "en" ? "Tell me about your project..." : "Erzählen Sie mir von Ihrem Projekt..."}
+                placeholder={lang === "en" ? "Tell me about your project or opportunity..." : "Erzählen Sie mir von Ihrem Projekt oder Stellenangebot..."}
               />
             </div>
             <button
@@ -108,7 +108,7 @@ export default function ContactSection() {
           </form>
 
           {/* Contact Info */}
-          <div className="grid gap-8 h-fit">
+          <div className="grid gap-6 h-fit">
             <div className="grid gap-4">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-full bg-white/10">
@@ -127,8 +127,37 @@ export default function ContactSection() {
                   <SvgIcon type="globe" className="w-5 h-5" normalColor="#ffffff" />
                 </div>
                 <div>
+                  <p className="text-white/50 text-sm">{lang === "en" ? "Phone" : "Telefon"}</p>
+                  <a href="tel:+4915511516067" className="text-white font-medium hover:text-white/70 transition-colors">
+                    +49 15511516067
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-full bg-white/10">
+                  <SvgIcon type="globe" className="w-5 h-5" normalColor="#ffffff" />
+                </div>
+                <div>
                   <p className="text-white/50 text-sm">{lang === "en" ? "Location" : "Standort"}</p>
                   <p className="text-white font-medium">{t("hero.location", lang)}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-full bg-white/10">
+                  <SvgIcon type="linkedin" className="w-5 h-5" normalColor="#ffffff" />
+                </div>
+                <div>
+                  <p className="text-white/50 text-sm">LinkedIn</p>
+                  <a
+                    href="https://www.linkedin.com/in/avadhesh-ghevariya-a9b108371"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-medium hover:text-white/70 transition-colors"
+                  >
+                    Avadhesh Ghevariya
+                  </a>
                 </div>
               </div>
 
@@ -150,13 +179,23 @@ export default function ContactSection() {
               </div>
             </div>
 
+            {/* CV Download */}
+            <a
+              href="/cv/lebenslauf.pdf"
+              download
+              className="flex items-center gap-3 p-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <SvgIcon type="rightArrow" className="w-5 h-5" normalColor="#ffffff" />
+              <p className="text-white font-medium text-sm">
+                {t("hero.downloadCV", lang)}
+              </p>
+            </a>
+
             {/* Availability badge */}
             <div className="flex items-center gap-3 p-4 rounded-xl border border-white/20 bg-white/5">
               <div className="w-3 h-3 rounded-full bg-white animate-pulse" />
               <p className="text-white/80 text-sm font-medium">
-                {lang === "en"
-                  ? "Available for on-site positions"
-                  : "Verfügbar für Vor-Ort-Stellen"}
+                {t("contact.availabilityBadge", lang)}
               </p>
             </div>
           </div>

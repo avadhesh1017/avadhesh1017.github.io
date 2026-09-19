@@ -134,14 +134,16 @@ export default function ProjectDetailClient() {
                         <div className="h-5 sm:h-6 bg-black flex items-center justify-center">
                           <div className="w-16 sm:w-20 h-3 sm:h-4 bg-black rounded-b-xl border border-white/10 border-t-0" />
                         </div>
-                        <Image
-                          src={src}
-                          width={220}
-                          height={487}
-                          alt={`${project.title} screenshot ${i + 1}`}
-                          className="w-full h-auto"
-                          unoptimized
-                        />
+                        <div className="aspect-[9/19] overflow-hidden">
+                          <Image
+                            src={src}
+                            width={220}
+                            height={464}
+                            alt={`${project.title} screenshot ${i + 1}`}
+                            className="w-full h-full object-cover object-top"
+                            unoptimized
+                          />
+                        </div>
                         <div className="h-4 sm:h-5 bg-black flex items-center justify-center">
                           <div className="w-20 sm:w-24 h-1 bg-white/20 rounded-full" />
                         </div>

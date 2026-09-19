@@ -27,17 +27,27 @@ const dict = {
 
   // Hero
   "hero.role": { en: "Software Engineer", de: "Softwareentwickler" },
-  "hero.location": { en: "Germany", de: "Deutschland" },
+  "hero.location": { en: "Kronach, Germany", de: "Kronach, Deutschland" },
   "hero.cta": { en: "Let's Talk", de: "Kontakt aufnehmen" },
+  "hero.description": {
+    en: "Master's student in Autonomous Driving in Germany with professional experience in Android development and project experience in Java, Kotlin, Python, C++, C#/.NET, databases, and autonomous systems.",
+    de: "Masterstudent im Bereich Autonomous Driving in Deutschland mit Berufserfahrung in der Android-Entwicklung und Projekterfahrung in Java, Kotlin, Python, C++, C#/.NET, Datenbanken und autonomen Systemen.",
+  },
+  "hero.availability": {
+    en: "Currently seeking Werkstudent, internship, and junior software-development opportunities in Germany.",
+    de: "Aktuell auf der Suche nach Werkstudent-, Praktikums- und Junior-Softwareentwicklungsstellen in Deutschland.",
+  },
+  "hero.downloadCV": { en: "Download CV", de: "Lebenslauf herunterladen" },
+  "hero.viewProjects": { en: "GitHub / View Projects", de: "GitHub / Projekte ansehen" },
 
   // Info section
   "info.heading": {
-    en: "I Don't Just Write Code",
-    de: "Ich schreibe nicht einfach nur Code",
+    en: "I Build Software Across Domains",
+    de: "Ich entwickle Software über verschiedene Bereiche",
   },
   "info.headingSub": {
-    en: " I Engineer Solutions That Scale.",
-    de: " Ich entwickle Lösungen, die skalieren.",
+    en: " — from mobile apps to autonomous systems.",
+    de: " — von mobilen Apps bis zu autonomen Systemen.",
   },
   "info.description": {
     en: "From mobile apps to sensor-driven systems — I build reliable software with clean architecture, strong fundamentals, and a focus on real-world impact.",
@@ -75,12 +85,12 @@ const dict = {
   "about.label": { en: "Intro", de: "Vorstellung" },
   "about.heading": { en: "About Me", de: "Über mich" },
   "about.bio": {
-    en: " is a software engineer based in Germany with hands-on experience in mobile development, sensor-based systems, and clean software architecture.",
-    de: " ist ein Softwareentwickler mit Sitz in Deutschland mit praktischer Erfahrung in Mobile-Entwicklung, sensorbasierten Systemen und sauberer Softwarearchitektur.",
+    en: "I am a Junior Software Engineer and Master's student in Autonomous Driving at Hochschule Hof. My professional background is in Android development, where I worked with Java, Android Studio, XML, databases, and object-oriented programming. In addition, I have academic and personal project experience with Kotlin, Python, C++, C#/.NET, SQL, and autonomous systems. I am interested in software development, mobile applications, backend-connected systems, and technologies related to autonomous driving.",
+    de: "Ich bin Junior-Softwareentwickler und Masterstudent im Bereich Autonomous Driving an der Hochschule Hof. Mein beruflicher Hintergrund liegt in der Android-Entwicklung, wo ich mit Java, Android Studio, XML, Datenbanken und objektorientierter Programmierung gearbeitet habe. Darüber hinaus habe ich akademische und persönliche Projekterfahrung mit Kotlin, Python, C++, C#/.NET, SQL und autonomen Systemen. Ich interessiere mich für Softwareentwicklung, mobile Anwendungen, Backend-verbundene Systeme und Technologien im Bereich des autonomen Fahrens.",
   },
   "about.locationText": {
-    en: "Originally from Surat, Gujarat, Avadhesh is pursuing a Master's in Autonomous Driving — working with radar, sensor fusion, and real-time systems — while continuing to build production-quality software across domains.",
-    de: "Ursprünglich aus Surat, Gujarat, verfolgt Avadhesh einen Master in Autonomous Driving — mit Radar, Sensorfusion und Echtzeitsystemen — und entwickelt gleichzeitig produktionsreife Software über verschiedene Bereiche hinweg.",
+    en: "Originally from Surat, Gujarat — now based in Kronach, Germany, pursuing a Master's in Autonomous Driving at Hochschule Hof.",
+    de: "Ursprünglich aus Surat, Gujarat — jetzt in Kronach, Deutschland, Masterstudium Autonomous Driving an der Hochschule Hof.",
   },
   "about.experience": { en: "Experience", de: "Erfahrung" },
   "about.expSub": { en: "Software & Application Engineering", de: "Software- & Anwendungsentwicklung" },
@@ -90,23 +100,23 @@ const dict = {
 
   // Skills
   "skills.label": { en: "Skills", de: "Fähigkeiten" },
-  "skills.heading": { en: "Technical Expertise", de: "Technisches Fachwissen" },
+  "skills.heading": { en: "Technical Skills", de: "Technische Fähigkeiten" },
   "skills.headingSub": {
     en: " spanning mobile, backend, and embedded systems engineering.",
     de: " über Mobile-, Backend- und Embedded-Systems-Engineering.",
   },
 
-  // Services
-  "services.label": { en: "Services", de: "Leistungen" },
+  // Services → Projects section
+  "services.label": { en: "Projects", de: "Projekte" },
   "services.heading": {
-    en: "High quality modular services",
-    de: "Hochwertige modulare Dienstleistungen",
+    en: "Project Highlights",
+    de: "Projekt-Highlights",
   },
   "services.headingSub": {
-    en: " tailored to your software product needs and business goals.",
-    de: " zugeschnitten auf Ihre Softwareprodukt-Bedürfnisse und Geschäftsziele.",
+    en: " — applications built with clean architecture and real-world constraints.",
+    de: " — Anwendungen mit sauberer Architektur und praxisnahen Anforderungen.",
   },
-  "services.getInTouch": { en: "Get in touch", de: "Kontakt aufnehmen" },
+  "services.getInTouch": { en: "View project", de: "Projekt ansehen" },
   "services.startingPrice": { en: "starting price", de: "Startpreis" },
 
   // FAQ
@@ -118,20 +128,25 @@ const dict = {
 
   // Contact
   "contact.label": { en: "Contact", de: "Kontakt" },
-  "contact.heading": { en: "Let's Work Together", de: "Lassen Sie uns zusammenarbeiten" },
+  "contact.heading": { en: "Get in Touch", de: "Kontakt aufnehmen" },
   "contact.headingSub": {
-    en: "Have a project in mind? Let's build it together.",
-    de: "Haben Sie ein Projekt im Sinn? Lassen Sie es uns gemeinsam umsetzen.",
+    en: "I'm open to opportunities, collaborations, and conversations.",
+    de: "Ich bin offen für Stellenangebote, Zusammenarbeit und Gespräche.",
   },
   "contact.name": { en: "Your Name", de: "Ihr Name" },
   "contact.email": { en: "Your Email", de: "Ihre E-Mail" },
   "contact.message": { en: "Your Message", de: "Ihre Nachricht" },
   "contact.send": { en: "Send Message", de: "Nachricht senden" },
   "contact.sending": { en: "Sending...", de: "Wird gesendet..." },
+  "contact.availabilityBadge": {
+    en: "Open to Werkstudent, internship & junior roles in Germany",
+    de: "Offen für Werkstudent-, Praktikums- & Junior-Stellen in Deutschland",
+  },
 
   // Footer
-  "footer.ready": { en: "Ready to work with a", de: "Bereit mit einem" },
-  "footer.professional": { en: "professional developer?", de: "professionellen Entwickler zu arbeiten?" },
+  "footer.ready": { en: "Interested in working with a", de: "Interesse an einem" },
+  "footer.professional": { en: "motivated developer?", de: "motivierten Entwickler?" },
+  "footer.getInTouch": { en: "Get in touch", de: "Kontakt aufnehmen" },
   "footer.menu": { en: "Menu", de: "Menü" },
   "footer.legal": { en: "Legal", de: "Rechtliches" },
   "footer.privacy": { en: "Privacy Policy", de: "Datenschutz" },

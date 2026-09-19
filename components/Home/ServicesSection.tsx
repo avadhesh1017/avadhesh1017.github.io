@@ -2,7 +2,6 @@
 
 import SvgIcon from "../common/SvgIcon";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -74,7 +73,6 @@ export default function ServicesSection() {
                 background: `radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 70%, #050505 100%)`,
               }}
             >
-              {/* Subtle geometric grid lines */}
               <div
                 className="absolute inset-0 opacity-[0.04]"
                 style={{
@@ -114,10 +112,18 @@ export default function ServicesSection() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3.5 pt-4 border-t border-white/10">
-                <Link href="/contact" className="btn-ghost hover:scale-105 transition-all text-xs sm:text-sm py-3 px-5">
-                  <span>{t("services.getInTouch", lang)}</span>
-                  <SvgIcon type="rightArrow" className="w-3.5 h-3.5" normalColor="white" />
-                </Link>
+                {item.github && (
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-ghost hover:scale-105 transition-all text-xs sm:text-sm py-3 px-5"
+                  >
+                    <SvgIcon type="github" className="w-3.5 h-3.5" normalColor="white" />
+                    <span>{t("services.getInTouch", lang)}</span>
+                    <SvgIcon type="rightArrow" className="w-3.5 h-3.5" normalColor="white" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
