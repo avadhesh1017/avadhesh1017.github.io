@@ -31,7 +31,7 @@ export default function ProjectDetailClient() {
 
   const shots = project.screenshots ?? [];
   const hasShots = shots.length > 0;
-  const isLandscape = shots.some((s) => s.includes("mangalens"));
+  const isLandscape = shots.some((s) => s.includes("mangalens") || s.includes("aegis-kf") || s.includes("aegis-hmi"));
 
   const scrollTo = (idx: number) => {
     if (!scrollRef.current) return;

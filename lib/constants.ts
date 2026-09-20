@@ -261,6 +261,86 @@ export const PROJECTS: Project[] = [
     ],
     github: "https://github.com/avadhesh1017/MangaLens",
   },
+  {
+    id: "aegis-kalman-filter",
+    title: "AEGIS Kalman Filter",
+    subtitle: {
+      en: "Multi-Sensor Fusion for Autonomous Robot Localization",
+      de: "Multi-Sensor-Fusion für autonome Roboterlokalisierung",
+    },
+    category: { en: "Autonomous Systems", de: "Autonome Systeme" },
+    time: "2025",
+    img: "/img/aegis-kf-sensors.png",
+    screenshots: [
+      "/img/aegis-kf-sensors.png",
+      "/img/aegis-kf-kalman.png",
+      "/img/aegis-kf-frames.png",
+      "/img/aegis-kf-trajectory.png",
+    ],
+    description: {
+      en: "A Kalman Filter design for ego-localization of the AEGIS autonomous cleaning robot. Fuses data from three heterogeneous sensors — Wheel Encoders (50 Hz), Optitrack motion capture (120 Hz), and YDLIDAR G4 laser scanner (9 Hz) — to estimate a 5-state vector: position (x, y), heading (θ), linear velocity (v), and angular velocity (ω). Includes full mathematical formulation with a 5×5 state transition matrix using constant-velocity kinematics, three sensor-specific measurement matrices, process and measurement noise covariance tuning, and coordinate frame transformations between Map, Robot, and Lidar frames. Part of M.Sc. Autonomous Driving coursework at Hochschule Hof.",
+      de: "Ein Kalman-Filter-Entwurf zur Ego-Lokalisierung des autonomen Reinigungsroboters AEGIS. Fusioniert Daten von drei heterogenen Sensoren — Radencoder (50 Hz), Optitrack Motion Capture (120 Hz) und YDLIDAR G4 Laserscanner (9 Hz) — zur Schätzung eines 5-Zustands-Vektors: Position (x, y), Orientierung (θ), Lineargeschwindigkeit (v) und Winkelgeschwindigkeit (ω). Enthält vollständige mathematische Formulierung mit 5×5-Zustandsübergangsmatrix, drei sensorspezifischen Messmatrizen, Prozess- und Messrausch-Kovarianz-Abstimmung und Koordinatenrahmen-Transformationen. Teil des M.Sc. Autonomous Driving Studiums an der Hochschule Hof.",
+    },
+    technologies: ["Kalman Filter", "Sensor Fusion", "Python", "NumPy", "ROS2", "Optitrack", "YDLIDAR G4"],
+    featured: false,
+    accentColor: "#2196F3",
+    keyFeatures: [
+      {
+        en: "5-state Kalman Filter fusing Wheel Encoders, Optitrack, and YDLIDAR G4",
+        de: "5-Zustands-Kalman-Filter mit Fusion von Radencodern, Optitrack und YDLIDAR G4",
+      },
+      {
+        en: "Full 5×5 state transition matrix with nonlinear heading kinematics",
+        de: "Vollständige 5×5-Zustandsübergangsmatrix mit nichtlinearer Kurskinematik",
+      },
+      {
+        en: "Three coordinate frames (Map, Robot, Lidar) with rigid-body transforms",
+        de: "Drei Koordinatenrahmen (Karte, Roboter, Lidar) mit Starrkörper-Transformationen",
+      },
+      {
+        en: "Noise-filtered trajectory estimation with RMSE validation plan",
+        de: "Rauschgefilterte Trajektorienschätzung mit RMSE-Validierungsplan",
+      },
+    ],
+    github: "https://github.com/avadhesh1017/AEGIS-Kalman-Filter-Sensor-Fusion",
+  },
+  {
+    id: "aegis-hmi-design",
+    title: "AEGIS HMI Design",
+    subtitle: {
+      en: "Human-Centered Interface Design for an Autonomous Robot",
+      de: "Menschzentriertes Schnittstellendesign für einen autonomen Roboter",
+    },
+    category: { en: "UX / Systems Design", de: "UX / Systemdesign" },
+    time: "2025",
+    img: "/img/aegis-hmi-prototype.jpg",
+    description: {
+      en: "A complete Human-Centered Design (HCD) process for the operator interface of AEGIS, an autonomous biohazard cleaning robot for high-containment laboratories. Covers four stages: user research with interviews of lab scientists, persona development and customer journey mapping, fishbowl ideation generating 10 solutions traced to 6 functions, and a low-fidelity prototype of 5 screens designed in Figma (System Status, Request Cleaning, Navigation, Cleaning + Validation, Post-Cleaning). Includes a full ROS2 interface specification with typed topics for robot state, pose, battery, detections, operator commands, and emergency stop. Part of M.Sc. Autonomous Driving coursework at Hochschule Hof.",
+      de: "Ein vollständiger Human-Centered-Design-Prozess (HCD) für die Bedieneroberfläche von AEGIS, einem autonomen Biohazard-Reinigungsroboter für Hochsicherheitslabore. Umfasst vier Phasen: Nutzerforschung mit Interviews von Laborwissenschaftlern, Persona-Entwicklung und Customer Journey Mapping, Fishbowl-Ideation mit 10 Lösungen zurückgeführt auf 6 Funktionen, und einen Low-Fidelity-Prototyp mit 5 in Figma entworfenen Bildschirmen. Enthält eine vollständige ROS2-Schnittstellenspezifikation. Teil des M.Sc. Autonomous Driving Studiums an der Hochschule Hof.",
+    },
+    technologies: ["Figma", "Human-Centered Design", "ROS2", "Customer Journey Mapping", "UX Research"],
+    featured: false,
+    accentColor: "#00897B",
+    keyFeatures: [
+      {
+        en: "4-stage HCD process: user research, ideation, task flow, prototype",
+        de: "4-stufiger HCD-Prozess: Nutzerforschung, Ideation, Task-Flow, Prototyp",
+      },
+      {
+        en: "5-screen low-fidelity prototype covering the full robot mission lifecycle",
+        de: "5-Bildschirm Low-Fidelity-Prototyp über den gesamten Roboter-Missionslebenszyklus",
+      },
+      {
+        en: "Full traceability: findings → problems → solutions → functions → screens",
+        de: "Vollständige Rückverfolgbarkeit: Erkenntnisse → Probleme → Lösungen → Funktionen → Bildschirme",
+      },
+      {
+        en: "ROS2 interface spec with typed topics for robot-operator communication",
+        de: "ROS2-Schnittstellenspezifikation mit typisierten Topics für Roboter-Bediener-Kommunikation",
+      },
+    ],
+    github: "https://github.com/avadhesh1017/AEGIS-HMI-Design",
+  },
 ];
 
 /* ────────────────────────────────────────────
