@@ -104,3 +104,9 @@ body {
   background: #fff;
   color: #000;
 }
+
+/* Scroll indicator dot bounce */
+@keyframes scroll-dot {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(16px); opacity: 0.3; }
+}

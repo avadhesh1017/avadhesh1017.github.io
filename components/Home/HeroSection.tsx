@@ -48,7 +48,7 @@ export default function HeroSection() {
           heroRef.current,
           { scale: 1, borderRadius: 0 },
           {
-            scale: 0.85,
+            scale: 0.9,
             borderRadius: 20,
             transformOrigin: "center center",
             ease: "none",
@@ -120,6 +120,46 @@ export default function HeroSection() {
         stagger: 0.15,
         delay: 1.0,
       });
+
+      gsap.fromTo(
+        ".hero-float-wrap",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "40% top",
+            scrub: 1.5,
+          },
+        }
+      );
+
+      gsap.utils.toArray<HTMLElement>(".hero-float-img").forEach((el, i) => {
+        gsap.to(el, {
+          yPercent: -(20 + i * 8),
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1.5 + i * 0.2,
+          },
+        });
+      });
+
+      gsap.to(".hero-scroll-hint", {
+        opacity: 0,
+        y: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "2% top",
+          end: "10% top",
+          scrub: 1,
+        },
+      });
     },
     { scope: sectionRef }
   );
@@ -131,6 +171,40 @@ export default function HeroSection() {
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-white/[0.03] blur-[120px] animate-pulse" />
           <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-white/[0.02] blur-[80px]" style={{ animation: "pulse 4s ease-in-out infinite alternate" }} />
+        </div>
+
+        {/* Floating project images — revealed as hero scales down */}
+        <div className="absolute inset-0 pointer-events-none hero-float-wrap" aria-hidden="true">
+          <div className="hero-float-img absolute top-[5%] left-[3%]" style={{ transform: "rotate(-12deg)" }}>
+            <div className="relative w-[80px] sm:w-[110px] md:w-[140px] lg:w-[170px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+              <Image src="/img/quickcare/quickcare-p53-5.jpg" fill alt="" unoptimized className="object-cover" sizes="170px" />
+            </div>
+          </div>
+          <div className="hero-float-img absolute top-[8%] right-[4%]" style={{ transform: "rotate(8deg)" }}>
+            <div className="relative w-[120px] sm:w-[160px] md:w-[200px] lg:w-[260px] aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+              <Image src="/img/mangalens-screenshot-1.jpg" fill alt="" unoptimized className="object-cover" sizes="260px" />
+            </div>
+          </div>
+          <div className="hero-float-img absolute top-[42%] left-[2%]" style={{ transform: "rotate(5deg)" }}>
+            <div className="relative w-[110px] sm:w-[140px] md:w-[180px] lg:w-[220px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+              <Image src="/img/aegis-kf-trajectory.png" fill alt="" unoptimized className="object-cover" sizes="220px" />
+            </div>
+          </div>
+          <div className="hero-float-img absolute top-[38%] right-[2%]" style={{ transform: "rotate(-7deg)" }}>
+            <div className="relative w-[70px] sm:w-[100px] md:w-[120px] lg:w-[150px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+              <Image src="/img/notyourmoney-1.jpg" fill alt="" unoptimized className="object-cover" sizes="150px" />
+            </div>
+          </div>
+          <div className="hero-float-img absolute bottom-[10%] left-[5%]" style={{ transform: "rotate(-6deg)" }}>
+            <div className="relative w-[80px] sm:w-[100px] md:w-[130px] lg:w-[160px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+              <Image src="/img/taskflow-calendar.jpg" fill alt="" unoptimized className="object-cover" sizes="160px" />
+            </div>
+          </div>
+          <div className="hero-float-img absolute bottom-[6%] right-[5%]" style={{ transform: "rotate(9deg)" }}>
+            <div className="relative w-[120px] sm:w-[150px] md:w-[190px] lg:w-[240px] aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+              <Image src="/img/aegis-hmi-prototype.jpg" fill alt="" unoptimized className="object-cover" sizes="240px" />
+            </div>
+          </div>
         </div>
 
         <div ref={heroRef} className="will-change-transform">
@@ -230,6 +304,14 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="hero-scroll-hint absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+          <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
+            <div className="w-1.5 h-1.5 rounded-full bg-white/50" style={{ animation: "scroll-dot 2s ease-in-out infinite" }} />
+          </div>
+          <span className="text-white/25 text-[10px] tracking-[3px] uppercase font-medium">Scroll</span>
         </div>
       </div>
 
